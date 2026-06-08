@@ -1,0 +1,260 @@
+[gd_scene format=3 uid="uid://83vehrgn6eku"]
+
+[ext_resource type="Script" uid="uid://dmdfy8e78k6n8" path="res://animated_button.gd" id="1_e5qqf"]
+[ext_resource type="Texture2D" uid="uid://c0gxt584s16m7" path="res://temp folder/Button Itch Pack/Start/Start1.png" id="1_glbon"]
+[ext_resource type="Texture2D" uid="uid://b32dxtxy23hw6" path="res://temp folder/Button Itch Pack/Start/Start2.png" id="2_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://d01b200r4qwq" path="res://temp folder/Button Itch Pack/Start/Start3.png" id="3_qe12f"]
+[ext_resource type="Texture2D" uid="uid://b44ejury7ifg5" path="res://temp folder/Button Itch Pack/Start/Start4.png" id="4_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://iv0nufpkbjkc" path="res://temp folder/Button Itch Pack/Start/Start5.png" id="5_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://2kpehwdiynww" path="res://temp folder/Button Itch Pack/New game/New Game1.png" id="6_ojb7r"]
+[ext_resource type="Texture2D" uid="uid://lvbp5tufw1em" path="res://temp folder/Button Itch Pack/New game/New Game2.png" id="7_e5qqf"]
+[ext_resource type="Texture2D" uid="uid://bjxd03ov4wlim" path="res://temp folder/Button Itch Pack/New game/New Game3.png" id="8_7bbuq"]
+[ext_resource type="Texture2D" uid="uid://b7i8nvqduw2m3" path="res://temp folder/Button Itch Pack/New game/New Game4.png" id="9_saq78"]
+[ext_resource type="Texture2D" uid="uid://ba36pij8v2sw7" path="res://temp folder/Button Itch Pack/New game/New Game5.png" id="10_8uw0o"]
+[ext_resource type="Texture2D" uid="uid://4qi71wl02h7n" path="res://temp folder/Button Itch Pack/Settings/Settings1.png" id="11_ql5ya"]
+[ext_resource type="Texture2D" uid="uid://wdh52oxw5vk2" path="res://temp folder/Button Itch Pack/Settings/Settings2.png" id="12_ka3nr"]
+[ext_resource type="Texture2D" uid="uid://ct6t1q4smubau" path="res://temp folder/Button Itch Pack/Settings/Settings3.png" id="13_48knj"]
+[ext_resource type="Texture2D" uid="uid://kk7nu4hn7hp2" path="res://temp folder/Button Itch Pack/Settings/Settings4.png" id="14_m2y5l"]
+[ext_resource type="Texture2D" uid="uid://bv8cwrex0835m" path="res://temp folder/Button Itch Pack/Settings/Settings5.png" id="15_imjy1"]
+[ext_resource type="Texture2D" uid="uid://bfcaa8e1ssmsi" path="res://temp folder/Button Itch Pack/Quit/Quit1.png" id="16_u5051"]
+[ext_resource type="Texture2D" uid="uid://x7xu1dy4v6s0" path="res://temp folder/Button Itch Pack/Back/Back1.png" id="17_e5qqf"]
+[ext_resource type="Texture2D" uid="uid://co5lesdac38cd" path="res://temp folder/Button Itch Pack/Quit/Quit2.png" id="17_v2sba"]
+[ext_resource type="Texture2D" uid="uid://cq6218ctvndod" path="res://temp folder/Button Itch Pack/Back/Back2.png" id="18_7bbuq"]
+[ext_resource type="Texture2D" uid="uid://q17fpvw43wj8" path="res://temp folder/Button Itch Pack/Quit/Quit3.png" id="18_ai24q"]
+[ext_resource type="Texture2D" uid="uid://b12jfdht6j6b8" path="res://temp folder/Button Itch Pack/Quit/Quit4.png" id="19_qby1g"]
+[ext_resource type="Texture2D" uid="uid://dgg8kpaluf0ct" path="res://temp folder/Button Itch Pack/Back/Back3.png" id="19_saq78"]
+[ext_resource type="Texture2D" uid="uid://c6mipa5cjoevq" path="res://temp folder/Button Itch Pack/Quit/Quit5.png" id="20_04soa"]
+[ext_resource type="Texture2D" uid="uid://df4isnmjm3it3" path="res://temp folder/Button Itch Pack/Back/Back4.png" id="20_8uw0o"]
+[ext_resource type="Texture2D" uid="uid://cdtd8ad2j1gji" path="res://temp folder/Button Itch Pack/Back/Back5.png" id="21_ql5ya"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0o4t1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_glbon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nlkkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qe12f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8qtwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dy7ct")
+}],
+"loop": false,
+"name": &"click",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0k4wn"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("6_ojb7r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_e5qqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_7bbuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_saq78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_8uw0o")
+}],
+"loop": false,
+"name": &"click",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_j5v2v"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("11_ql5ya")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_ka3nr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_48knj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_m2y5l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_imjy1")
+}],
+"loop": false,
+"name": &"click",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iotk1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("16_u5051")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_v2sba")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_ai24q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qby1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_04soa")
+}],
+"loop": false,
+"name": &"click",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_e5qqf"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_glbon")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_nlkkf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_qe12f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_8qtwp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_dy7ct")
+}],
+"loop": false,
+"name": &"click",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7bbuq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("17_e5qqf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_7bbuq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_saq78")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_8uw0o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_ql5ya")
+}],
+"loop": false,
+"name": &"click",
+"speed": 5.0
+}]
+
+[node name="Control" type="Control" unique_id=1619355093]
+layout_mode = 3
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+accessibility_name = "MainMenu"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1638327346]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = 20.0
+offset_bottom = 20.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Start" type="TextureButton" parent="VBoxContainer" unique_id=775362963]
+layout_mode = 2
+script = ExtResource("1_e5qqf")
+action = "continue"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/Start" unique_id=392190886]
+sprite_frames = SubResource("SpriteFrames_0o4t1")
+animation = &"click"
+
+[node name="New game" type="TextureButton" parent="VBoxContainer" unique_id=1482158561]
+layout_mode = 2
+script = ExtResource("1_e5qqf")
+action = "new_game"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/New game" unique_id=1730100890]
+sprite_frames = SubResource("SpriteFrames_0k4wn")
+animation = &"click"
+
+[node name="Settings" type="TextureButton" parent="VBoxContainer" unique_id=1802570680]
+layout_mode = 2
+script = ExtResource("1_e5qqf")
+action = "settings"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/Settings" unique_id=1178661891]
+sprite_frames = SubResource("SpriteFrames_j5v2v")
+animation = &"click"
+
+[node name="Quit game" type="TextureButton" parent="VBoxContainer" unique_id=1887016023]
+layout_mode = 2
+script = ExtResource("1_e5qqf")
+action = "quit"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/Quit game" unique_id=1784675]
+sprite_frames = SubResource("SpriteFrames_iotk1")
+animation = &"click"
+
+[node name="ConfirmPanel" type="Panel" parent="." unique_id=9496727]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="ConfirmPanel" unique_id=1078062610]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Start" type="TextureButton" parent="ConfirmPanel" unique_id=295169715]
+layout_mode = 0
+script = ExtResource("1_e5qqf")
+action = "start"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ConfirmPanel/Start" unique_id=1080666779]
+sprite_frames = SubResource("SpriteFrames_e5qqf")
+animation = &"click"
+
+[node name="Back" type="TextureButton" parent="ConfirmPanel" unique_id=1044286154]
+layout_mode = 0
+script = ExtResource("1_e5qqf")
+action = "back"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ConfirmPanel/Back" unique_id=1070798402]
+sprite_frames = SubResource("SpriteFrames_7bbuq")
+animation = &"click"

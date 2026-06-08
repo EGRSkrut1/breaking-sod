@@ -1,0 +1,119 @@
+[gd_scene format=3 uid="uid://b1lmlnwcu507b"]
+
+[ext_resource type="Script" uid="uid://b4b10v38lp23j" path="res://ui/atm/atm_ui.gd" id="1_ecyit"]
+[ext_resource type="Texture2D" uid="uid://1f1irxpswjs3" path="res://assets/icon/dollar.png" id="2_la2gd"]
+[ext_resource type="Texture2D" uid="uid://c6vuqfmegm6ll" path="res://assets/icon/card.png" id="3_g1u1v"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5tpeo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gbs6u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_g1u1v")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_iv0kl"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_la2gd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="AtmUI" type="CanvasLayer" unique_id=1174427888]
+script = ExtResource("1_ecyit")
+
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=550618520]
+position = Vector2(573.635, 321.76498)
+scale = Vector2(2.6274135, 2.1419556)
+sprite_frames = SubResource("SpriteFrames_5tpeo")
+
+[node name="Exchange" type="Panel" parent="." unique_id=1936825371]
+offset_left = 39.0
+offset_top = 30.0
+offset_right = 1108.0
+offset_bottom = 614.0
+
+[node name="to" type="Button" parent="Exchange" unique_id=1401300845]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -10.5
+offset_top = -17.0
+offset_right = 7.5
+offset_bottom = 14.0
+grow_horizontal = 2
+grow_vertical = 2
+text = ">"
+
+[node name="ExchangeButton" type="Button" parent="Exchange" unique_id=2082987747]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -41.0
+offset_top = -46.53003
+offset_right = 41.0
+offset_bottom = -15.530029
+grow_horizontal = 2
+grow_vertical = 0
+text = "Exchange"
+
+[node name="LineEdit" type="LineEdit" parent="Exchange" unique_id=1396612093]
+layout_mode = 0
+offset_left = 484.0
+offset_top = 479.0
+offset_right = 588.0
+offset_bottom = 510.0
+text = "0"
+alignment = 1
+
+[node name="Card" type="Panel" parent="Exchange" unique_id=928080031]
+layout_mode = 0
+offset_left = 613.0
+offset_top = 168.0
+offset_right = 865.0
+offset_bottom = 398.0
+
+[node name="AnimatedSpite2D" type="AnimatedSprite2D" parent="Exchange/Card" unique_id=322876600]
+position = Vector2(124.000015, 105)
+scale = Vector2(0.25000006, 0.22226563)
+sprite_frames = SubResource("SpriteFrames_gbs6u")
+
+[node name="Money" type="Panel" parent="Exchange" unique_id=937733031]
+layout_mode = 0
+offset_left = 211.0
+offset_top = 161.0
+offset_right = 458.0
+offset_bottom = 391.0
+
+[node name="AnimatedSpite2D" type="AnimatedSprite2D" parent="Exchange/Money" unique_id=471758220]
+position = Vector2(118.000015, 117)
+scale = Vector2(0.25625, 0.26875)
+sprite_frames = SubResource("SpriteFrames_iv0kl")
+
+[node name="CloseButton" type="Button" parent="." unique_id=658081022]
+offset_right = 8.0
+offset_bottom = 8.0

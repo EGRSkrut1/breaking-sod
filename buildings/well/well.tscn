@@ -1,0 +1,82 @@
+[gd_scene format=3 uid="uid://mdrs3b3ts4s8"]
+
+[ext_resource type="Script" uid="uid://bnp1lv1b1qsu1" path="res://buildings/well/well.gd" id="1_7ftsu"]
+[ext_resource type="Texture2D" uid="uid://d0o7i33mdlt2p" path="res://assets/Objects/chest.png" id="1_rymds"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ftsu"]
+size = Vector2(44, 49)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hmora"]
+atlas = ExtResource("1_rymds")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_po7mb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hmora")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Well" type="Area2D" unique_id=10691940]
+script = ExtResource("1_7ftsu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=986695216]
+position = Vector2(0, -0.5)
+shape = SubResource("RectangleShape2D_7ftsu")
+
+[node name="Label" type="Label" parent="." unique_id=1736075517]
+offset_left = -13.0
+offset_top = -23.0
+offset_right = 42.0
+theme_override_font_sizes/font_size = 8
+text = "Enter E"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1522801321]
+sprite_frames = SubResource("SpriteFrames_po7mb")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=1573637544]
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -6.9999976
+offset_top = -12.000001
+offset_right = 29.105001
+offset_bottom = 1.2199993
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset = Vector2(-2.5, 0)
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+step = 1.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="ProgressBar" unique_id=1960953865]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.89
+offset_top = 1.0
+offset_right = 8.890003
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.00015141026, 1.6710631e-07, 0.0007974286, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 0)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 11
+
+[node name="name" type="Label" parent="." unique_id=1623029084]
+offset_left = -6.0
+offset_top = 6.0
+offset_right = 26.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 6
+text = "well"

@@ -1,0 +1,133 @@
+[gd_scene format=3 uid="uid://t67e2c3pte48"]
+
+[ext_resource type="Script" uid="uid://clxcka31vkw7g" path="res://ui/customer/customer_ui.gd" id="1_e07ql"]
+
+[node name="CustomerUI" type="CanvasLayer" unique_id=1198666584]
+script = ExtResource("1_e07ql")
+
+[node name="Panel" type="Panel" parent="." unique_id=1305707252]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -366.0
+offset_top = -118.0
+offset_right = 365.0
+offset_bottom = 136.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="Panel" unique_id=793494756]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 246.0
+offset_bottom = 253.0
+
+[node name="ItemList" type="VBoxContainer" parent="Panel/ScrollContainer" unique_id=2068464446]
+layout_mode = 2
+
+[node name="SellButton" type="Button" parent="." unique_id=1459421885]
+offset_left = 544.0
+offset_top = 417.0
+offset_right = 709.0
+offset_bottom = 448.0
+text = "sell"
+
+[node name="CancelButton" type="Button" parent="." unique_id=1935026962]
+offset_left = 921.0
+offset_top = 208.0
+offset_right = 939.0
+offset_bottom = 239.0
+text = "X"
+
+[node name="Count" type="Panel" parent="." unique_id=1570379687]
+offset_left = 472.0
+offset_top = 256.0
+offset_right = 779.0
+offset_bottom = 393.0
+
+[node name="subtract" type="Button" parent="Count" unique_id=1832335726]
+layout_mode = 0
+offset_left = 71.0
+offset_top = 104.0
+offset_right = 89.0
+offset_bottom = 135.0
+text = "<"
+
+[node name="add" type="Button" parent="Count" unique_id=1869658573]
+layout_mode = 0
+offset_left = 216.0
+offset_top = 104.0
+offset_right = 234.0
+offset_bottom = 135.0
+text = ">"
+
+[node name="Text" type="Panel" parent="Count" unique_id=1674713104]
+layout_mode = 0
+offset_left = 91.0
+offset_top = 104.0
+offset_right = 215.0
+offset_bottom = 135.0
+
+[node name="count" type="Label" parent="Count/Text" unique_id=455564088]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="OfferLabel" type="Label" parent="Count" unique_id=300069050]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 57.0
+offset_right = 306.0
+offset_bottom = 80.0
+text = "offer"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PriceLabel" type="Label" parent="Count" unique_id=582961620]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 6.0
+offset_right = 304.0
+offset_bottom = 29.0
+text = "price"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="irritability" type="Panel" parent="." unique_id=789888450]
+offset_left = 811.0
+offset_top = 233.0
+offset_right = 908.0
+offset_bottom = 436.0
+
+[node name="ProgressBar" type="ProgressBar" parent="irritability" unique_id=399504718]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="subtract" type="Button" parent="irritability" unique_id=916281868]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 87.0
+offset_right = 19.0
+offset_bottom = 118.0
+text = "<"
+
+[node name="add" type="Button" parent="irritability" unique_id=1484482539]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 87.0
+offset_right = 96.0
+offset_bottom = 118.0
+text = ">"

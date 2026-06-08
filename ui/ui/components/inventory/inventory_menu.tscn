@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://d0rrx4lgc2sqg"]
+
+[ext_resource type="Script" uid="uid://cb7ioe5snuacn" path="res://ui/ui/components/inventory/inventory_menu.gd" id="1_j58d0"]
+
+[node name="InventoryMenu" type="Panel" unique_id=1586859401]
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("1_j58d0")
+
+[node name="ItemList" type="VBoxContainer" parent="." unique_id=1912015302]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0

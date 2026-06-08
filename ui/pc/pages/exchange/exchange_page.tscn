@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bvpstqibwnveb"]
+
+[ext_resource type="Script" uid="uid://c2fhxhj3i3fxw" path="res://ui/pc/pages/exchange/exchange_page.gd" id="1_yo34j"]
+[ext_resource type="Texture2D" uid="uid://caeta86a7oev0" path="res://assets/backgrounds_pc/white_background.jpg" id="2_olypg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_311lc"]
+atlas = ExtResource("2_olypg")
+region = Rect2(101, 134, 101, 67)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_pped5"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_311lc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Exchange" type="Panel" unique_id=501435658]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -532.4875
+offset_top = -269.2525
+offset_right = 532.4875
+offset_bottom = 269.2525
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_yo34j")
+
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=1537434339]
+position = Vector2(532.4875, 269.2525)
+scale = Vector2(10.514852, 7.9999995)
+sprite_frames = SubResource("SpriteFrames_pped5")
+
+[node name="ExchangeButton" type="Button" parent="." unique_id=183247337]
+layout_mode = 0
+offset_left = 409.4875
+offset_top = 386.2525
+offset_right = 576.975
+offset_bottom = 446.505
+
+[node name="To" type="Button" parent="." unique_id=980999353]
+layout_mode = 0
+offset_left = 468.4875
+offset_top = 174.2525
+offset_right = 519.975
+offset_bottom = 228.505
+
+[node name="LineEdit" type="LineEdit" parent="." unique_id=1840355407]
+layout_mode = 0
+offset_left = 461.4875
+offset_top = 313.2525
+offset_right = 529.9875
+offset_bottom = 344.2525

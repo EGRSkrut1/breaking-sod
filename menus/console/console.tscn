@@ -1,0 +1,37 @@
+[gd_scene format=3 uid="uid://co3rmtie2kkkw"]
+
+[ext_resource type="Script" uid="uid://78nmj63pb8jj" path="res://menus/console/console.gd" id="1_lu137"]
+
+[node name="Console" type="CanvasLayer" unique_id=212284830]
+script = ExtResource("1_lu137")
+
+[node name="Panel" type="Panel" parent="." unique_id=384049792]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -230.0
+offset_top = -170.0
+offset_right = 230.0
+offset_bottom = 170.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="LineEdit" type="LineEdit" parent="Panel" unique_id=311979484]
+layout_mode = 0
+offset_top = 310.0
+offset_right = 459.0
+offset_bottom = 341.0
+
+[node name="OutputText" type="RichTextLabel" parent="Panel" unique_id=1389345471]
+layout_mode = 0
+offset_right = 460.0
+offset_bottom = 307.0
+
+[node name="CloseButton" type="Button" parent="Panel" unique_id=1814847191]
+layout_mode = 0
+offset_left = 442.0
+offset_right = 460.0
+offset_bottom = 31.0
+text = "X"

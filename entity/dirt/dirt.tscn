@@ -1,0 +1,56 @@
+[gd_scene format=3 uid="uid://dfcqrkpdjbft2"]
+
+[ext_resource type="Script" uid="uid://dfiwmlu5xv5bd" path="res://entity/dirt/dirt.gd" id="1_1qqow"]
+[ext_resource type="Texture2D" uid="uid://cmbalxq4cl24x" path="res://assets/Tileset/Tileset Spring.png" id="2_wy34w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d0dg3"]
+atlas = ExtResource("2_wy34w")
+region = Rect2(144, 160, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_x8k87"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d0dg3")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wy34w"]
+size = Vector2(16, 16)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1qqow"]
+size = Vector2(16, 16)
+
+[node name="Dirt" type="StaticBody2D" unique_id=706086460]
+script = ExtResource("1_1qqow")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=390991503]
+sprite_frames = SubResource("SpriteFrames_x8k87")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1775878249]
+shape = SubResource("RectangleShape2D_wy34w")
+
+[node name="DigLabel" type="Label" parent="." unique_id=1168858014]
+offset_left = -4.0
+offset_top = -9.0
+offset_right = 13.0
+offset_bottom = 14.0
+theme_override_font_sizes/font_size = 5
+text = "Dig"
+
+[node name="HPLabel" type="Label" parent="." unique_id=1449139229]
+offset_left = -8.0
+offset_top = -1.0
+offset_right = 8.0
+offset_bottom = 18.0
+theme_override_font_sizes/font_size = 5
+text = "hp
+"
+
+[node name="MouseDetector" type="Area2D" parent="." unique_id=1791890539]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="MouseDetector" unique_id=279578488]
+shape = SubResource("RectangleShape2D_1qqow")

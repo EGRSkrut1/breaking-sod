@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://cyd7np5drw3iy"]
+
+[ext_resource type="Script" uid="uid://dukngaxqbe55u" path="res://buildings/basement/basement.gd" id="1_g1xpe"]
+[ext_resource type="Texture2D" uid="uid://d0o7i33mdlt2p" path="res://assets/Objects/chest.png" id="2_g1xpe"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jeraq"]
+size = Vector2(20, 18.233194)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2tl6"]
+atlas = ExtResource("2_g1xpe")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tapcy"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2tl6")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Basement" type="Area2D" unique_id=1911647965]
+script = ExtResource("1_g1xpe")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=242130817]
+position = Vector2(-2.3841858e-07, 3)
+scale = Vector2(1, -0.98721045)
+shape = SubResource("RectangleShape2D_jeraq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=690956658]
+position = Vector2(0, 1)
+scale = Vector2(0.5974999, 0.6599999)
+sprite_frames = SubResource("SpriteFrames_tapcy")
+
+[node name="label" type="Label" parent="." unique_id=2043586250]
+offset_left = -15.0
+offset_top = 5.0
+offset_right = 17.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 6
+text = "Basement
+"
+metadata/_edit_use_anchors_ = true

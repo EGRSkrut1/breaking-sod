@@ -1,0 +1,315 @@
+[gd_scene format=3 uid="uid://yktulwvd4k8x"]
+
+[ext_resource type="Script" uid="uid://dfvtvq8w8utgy" path="res://ui/pc/base/computer_ui.gd" id="1_ifacb"]
+[ext_resource type="Texture2D" uid="uid://dcfypu3ujd3ui" path="res://assets/backgrounds_pc/Ocean_7/6.png" id="3_ifacb"]
+[ext_resource type="Texture2D" uid="uid://cxojki1usmvbf" path="res://assets/icon/Social_Media/Maximalistic/TikTok.png" id="4_tmct8"]
+[ext_resource type="Texture2D" uid="uid://bb5h8vmdomfpn" path="res://assets/icon/Social_Media/Maximalistic/Instagram.png" id="5_n0sft"]
+[ext_resource type="Texture2D" uid="uid://dfi1bx1qtd656" path="res://assets/icon/Social_Media/Maximalistic/Twitter.png" id="6_ef0i6"]
+[ext_resource type="Texture2D" uid="uid://bd0s5r6hmtggt" path="res://assets/icon/Social_Media/Maximalistic/Twitch.png" id="7_geqxl"]
+[ext_resource type="Texture2D" uid="uid://dv07khx1myrqp" path="res://assets/icon/Social_Media/Maximalistic/Soundcloud.png" id="8_tkeb5"]
+[ext_resource type="Texture2D" uid="uid://dga2s2eox8j3s" path="res://assets/icon/Social_Media/Maximalistic/Pinterest.png" id="9_846nx"]
+[ext_resource type="Texture2D" uid="uid://byn3da8j1syqx" path="res://assets/icon/Social_Media/Maximalistic/Patreon.png" id="10_q4xea"]
+[ext_resource type="Texture2D" uid="uid://8a2pcudgyl3f" path="res://assets/icon/Social_Media/Minimalistic/Discord.png" id="11_gu4r1"]
+[ext_resource type="Texture2D" uid="uid://dhnshbv2yk40k" path="res://assets/icon/Social_Media/Minimalistic/Facebook.png" id="12_vagoo"]
+[ext_resource type="Texture2D" uid="uid://bkgw4gkp0ocm" path="res://assets/icon/Social_Media/Minimalistic/LinkedIn.png" id="13_aefrr"]
+[ext_resource type="Texture2D" uid="uid://c0mihfua5yl1p" path="res://assets/icon/Social_Media/Minimalistic/Tumblr.png" id="14_3qhl8"]
+[ext_resource type="PackedScene" uid="uid://cdokth0t7m455" path="res://ui/pc/pages/bank/bank_page.tscn" id="16_dwqgb"]
+[ext_resource type="Texture2D" uid="uid://cwlm83yfjnogs" path="res://assets/icon/weed_resources.png" id="17_846nx"]
+[ext_resource type="PackedScene" uid="uid://bvpstqibwnveb" path="res://ui/pc/pages/exchange/exchange_page.tscn" id="17_j2l5x"]
+[ext_resource type="Texture2D" uid="uid://c6vuqfmegm6ll" path="res://assets/icon/card.png" id="17_tkeb5"]
+[ext_resource type="PackedScene" uid="uid://cte2dtefi0wub" path="res://ui/pc/pages/growshop/growshop_page.tscn" id="18_j2l5x"]
+[ext_resource type="PackedScene" uid="uid://couni2vjca5ul" path="res://ui/pc/pages/search/search_page.tscn" id="19_oq7so"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qdagb"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("3_ifacb")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fplyo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q4xea"]
+atlas = ExtResource("17_846nx")
+region = Rect2(6, 0, 190, 216)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_gu4r1"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q4xea")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="ComputerUI" type="CanvasLayer" unique_id=735847810]
+script = ExtResource("1_ifacb")
+
+[node name="PageDesktop" type="Panel" parent="." unique_id=667535025]
+offset_right = 1150.0
+offset_bottom = 648.0
+
+[node name="Background" type="AnimatedSprite2D" parent="PageDesktop" unique_id=1215781116]
+position = Vector2(573.62494, 321.75003)
+scale = Vector2(0.46299908, 0.44791663)
+sprite_frames = SubResource("SpriteFrames_qdagb")
+
+[node name="Panel" type="Panel" parent="PageDesktop" unique_id=716832974]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.49913043
+anchor_top = 0.93517745
+anchor_right = 0.49913043
+anchor_bottom = 0.93517745
+offset_left = -225.0
+offset_top = -46.994995
+offset_right = 225.0
+offset_bottom = -6.994995
+grow_horizontal = 2
+grow_vertical = 0
+metadata/_edit_use_anchors_ = true
+
+[node name="Iconet" type="Button" parent="PageDesktop" unique_id=76613463]
+layout_mode = 0
+offset_left = 564.0
+offset_top = 372.0
+offset_right = 608.0
+offset_bottom = 410.0
+icon_alignment = 1
+expand_icon = true
+
+[node name="icotiktok" type="Button" parent="PageDesktop" unique_id=1036874715]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 344.0
+offset_right = 438.0
+offset_bottom = 376.0
+icon = ExtResource("4_tmct8")
+expand_icon = true
+
+[node name="icoinsta" type="Button" parent="PageDesktop" unique_id=1238940903]
+layout_mode = 0
+offset_left = 446.0
+offset_top = 344.0
+offset_right = 478.0
+offset_bottom = 376.0
+icon = ExtResource("5_n0sft")
+expand_icon = true
+
+[node name="icotwitter" type="Button" parent="PageDesktop" unique_id=1445135775]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 382.0
+offset_right = 438.0
+offset_bottom = 414.0
+icon = ExtResource("6_ef0i6")
+
+[node name="icotwitch" type="Button" parent="PageDesktop" unique_id=1694058229]
+layout_mode = 0
+offset_left = 406.0
+offset_top = 422.0
+offset_right = 438.0
+offset_bottom = 454.0
+icon = ExtResource("7_geqxl")
+
+[node name="icosound" type="Button" parent="PageDesktop" unique_id=1978933681]
+layout_mode = 0
+offset_left = 405.0
+offset_top = 304.0
+offset_right = 437.0
+offset_bottom = 336.0
+icon = ExtResource("8_tkeb5")
+
+[node name="icopinterest" type="Button" parent="PageDesktop" unique_id=725337040]
+layout_mode = 0
+offset_left = 444.0
+offset_top = 303.0
+offset_right = 476.0
+offset_bottom = 335.0
+icon = ExtResource("9_846nx")
+
+[node name="icopatreon" type="Button" parent="PageDesktop" unique_id=102584027]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 381.0
+offset_right = 477.0
+offset_bottom = 413.0
+icon = ExtResource("10_q4xea")
+
+[node name="icodiscord" type="Button" parent="PageDesktop" unique_id=283896404]
+layout_mode = 0
+offset_left = 486.0
+offset_top = 304.0
+offset_right = 518.0
+offset_bottom = 336.0
+icon = ExtResource("11_gu4r1")
+
+[node name="icofacebook" type="Button" parent="PageDesktop" unique_id=708053688]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 422.0
+offset_right = 477.0
+offset_bottom = 454.0
+icon = ExtResource("12_vagoo")
+
+[node name="icolinkedin" type="Button" parent="PageDesktop" unique_id=904125688]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 344.0
+offset_right = 517.0
+offset_bottom = 376.0
+icon = ExtResource("13_aefrr")
+
+[node name="icotunblr" type="Button" parent="PageDesktop" unique_id=526319736]
+layout_mode = 0
+offset_left = 485.0
+offset_top = 382.0
+offset_right = 517.0
+offset_bottom = 414.0
+icon = ExtResource("14_3qhl8")
+
+[node name="PageNet" type="Panel" parent="." unique_id=223304383]
+visible = false
+offset_left = 39.0
+offset_top = 30.0
+offset_right = 1108.0
+offset_bottom = 614.0
+
+[node name="Background" type="AnimatedSprite2D" parent="PageNet" unique_id=1684354510]
+position = Vector2(534.635, 291.76498)
+scale = Vector2(2.6274135, 2.1419556)
+sprite_frames = SubResource("SpriteFrames_fplyo")
+
+[node name="TopPanel" type="Panel" parent="PageNet" unique_id=903916149]
+layout_mode = 0
+offset_left = 2.369995
+offset_top = 2.105011
+offset_right = 1067.37
+offset_bottom = 43.10498
+
+[node name="Search" type="Button" parent="PageNet/TopPanel" unique_id=1714534094]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 0.7
+offset_right = 111.0
+offset_bottom = 39.7
+
+[node name="Sprite2D" type="Sprite2D" parent="PageNet/TopPanel/Search" unique_id=1919480307]
+position = Vector2(24, 21)
+scale = Vector2(0.035, 0.035)
+
+[node name="Label" type="Label" parent="PageNet/TopPanel/Search" unique_id=1801431787]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 6.0
+offset_right = 125.0
+offset_bottom = 44.0
+text = "Search"
+
+[node name="Exchange" type="Button" parent="PageNet/TopPanel" unique_id=637188054]
+layout_mode = 0
+offset_left = 117.0
+offset_top = 0.7
+offset_right = 242.0
+offset_bottom = 39.7
+
+[node name="Label" type="Label" parent="PageNet/TopPanel/Exchange" unique_id=529784965]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 6.0
+offset_right = 125.0
+offset_bottom = 44.0
+text = "Exchange"
+
+[node name="Sprite2D" type="Sprite2D" parent="PageNet/TopPanel/Exchange" unique_id=895611353]
+position = Vector2(21, 18)
+scale = Vector2(0.035, 0.035)
+
+[node name="GrowShop" type="Button" parent="PageNet/TopPanel" unique_id=67168465]
+layout_mode = 0
+offset_left = 247.0
+offset_top = 0.7
+offset_right = 379.0
+offset_bottom = 39.7
+
+[node name="Label" type="Label" parent="PageNet/TopPanel/GrowShop" unique_id=1034142895]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 6.0
+offset_right = 125.0
+offset_bottom = 44.0
+text = "Grow shop"
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="PageNet/TopPanel/GrowShop" unique_id=378717921]
+position = Vector2(20.999998, 14.999999)
+scale = Vector2(0.175, 0.175)
+sprite_frames = SubResource("SpriteFrames_gu4r1")
+
+[node name="Bank" type="Button" parent="PageNet/TopPanel" unique_id=1112948880]
+layout_mode = 0
+offset_left = 385.0
+offset_top = 0.7
+offset_right = 475.0
+offset_bottom = 39.7
+
+[node name="Label" type="Label" parent="PageNet/TopPanel/Bank" unique_id=2008757899]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 6.0
+offset_right = 125.0
+offset_bottom = 44.0
+text = "Bank"
+
+[node name="Sprite2D" type="Sprite2D" parent="PageNet/TopPanel/Bank" unique_id=712337183]
+position = Vector2(21, 18)
+scale = Vector2(0.035, 0.035)
+texture = ExtResource("17_tkeb5")
+
+[node name="Bank" parent="PageNet" unique_id=290299294 instance=ExtResource("16_dwqgb")]
+layout_mode = 1
+offset_left = -532.5
+offset_top = -248.0
+offset_right = 532.4751
+offset_bottom = 290.505
+
+[node name="Exchange" parent="PageNet" unique_id=501435658 instance=ExtResource("17_j2l5x")]
+layout_mode = 1
+offset_left = -532.5
+offset_top = -248.0
+offset_right = 532.4751
+offset_bottom = 290.505
+
+[node name="GrowShop" parent="PageNet" unique_id=622371578 instance=ExtResource("18_j2l5x")]
+layout_mode = 1
+offset_left = -532.5
+offset_top = -248.0
+offset_right = 532.4751
+offset_bottom = 290.505
+
+[node name="Search" parent="PageNet" unique_id=1732020418 instance=ExtResource("19_oq7so")]
+layout_mode = 1
+offset_left = -532.5
+offset_top = -248.0
+offset_right = 532.4751
+offset_bottom = 290.505
+
+[node name="CloseButton" type="Button" parent="." unique_id=741041526]
+offset_right = 8.0
+offset_bottom = 8.0
+
+[connection signal="pressed" from="PageDesktop/Iconet" to="." method="_on_iconet_pressed"]

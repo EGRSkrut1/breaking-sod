@@ -1,0 +1,316 @@
+[gd_scene format=3 uid="uid://bo85wmer32jr3"]
+
+[ext_resource type="Script" uid="uid://dmbrgfyn8ces5" path="res://ui/pc/pages/growshop/plants/growshop_plants_page.gd" id="1_rm2al"]
+[ext_resource type="Texture2D" uid="uid://cwlm83yfjnogs" path="res://assets/icon/weed_resources.png" id="14_5e5ma"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_fplyo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_846nx"]
+atlas = ExtResource("14_5e5ma")
+region = Rect2(1071, 22, 82, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_q4xea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_846nx")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gu4r1"]
+atlas = ExtResource("14_5e5ma")
+region = Rect2(1071, 90, 82, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_vagoo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gu4r1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vagoo"]
+atlas = ExtResource("14_5e5ma")
+region = Rect2(1071, 158, 82, 68)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_aefrr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vagoo")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="PlantsPage" type="Panel" unique_id=1039430811]
+offset_left = 3.0
+offset_top = 41.0
+offset_right = 1062.0
+offset_bottom = 536.0
+script = ExtResource("1_rm2al")
+
+[node name="Green" type="Panel" parent="." unique_id=446051508]
+layout_mode = 0
+offset_left = 7.0
+offset_top = 6.0
+offset_right = 115.0
+offset_bottom = 104.0
+
+[node name="Count" type="Panel" parent="Green" unique_id=1758976738]
+layout_mode = 0
+offset_top = 97.0
+offset_right = 108.0
+offset_bottom = 154.0
+
+[node name="subtract" type="Button" parent="Green/Count" unique_id=316212956]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 25.0
+offset_right = 19.0
+offset_bottom = 56.0
+text = "<"
+
+[node name="add" type="Button" parent="Green/Count" unique_id=922043798]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 25.0
+offset_right = 107.0
+offset_bottom = 56.0
+text = ">"
+
+[node name="Text" type="Panel" parent="Green/Count" unique_id=125616776]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 25.0
+offset_right = 87.0
+offset_bottom = 56.0
+
+[node name="count" type="Label" parent="Green/Count/Text" unique_id=2047019140]
+layout_mode = 0
+offset_right = 66.0
+offset_bottom = 31.0
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="Panel" parent="Green" unique_id=27552679]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.99200004
+anchor_right = 1.0
+anchor_bottom = 1.2290001
+offset_left = -6.1035156e-05
+offset_top = -6.215973
+offset_right = -6.1035156e-05
+offset_bottom = 0.557991
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Green/Text" unique_id=400520748]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 109.0
+offset_bottom = 29.0
+text = "Green - 10$"
+
+[node name="Background" type="AnimatedSprite2D" parent="Green" unique_id=915479763]
+position = Vector2(53.99997, 49.765015)
+scale = Vector2(0.26108366, 0.35597774)
+sprite_frames = SubResource("SpriteFrames_fplyo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Green" unique_id=1651584150]
+position = Vector2(53, 52)
+scale = Vector2(1.0000001, 1)
+sprite_frames = SubResource("SpriteFrames_q4xea")
+
+[node name="Purple" type="Panel" parent="." unique_id=46931830]
+layout_mode = 0
+offset_left = 137.0
+offset_top = 6.0
+offset_right = 245.0
+offset_bottom = 104.0
+
+[node name="Count" type="Panel" parent="Purple" unique_id=2087017539]
+layout_mode = 0
+offset_top = 97.0
+offset_right = 108.0
+offset_bottom = 154.0
+
+[node name="subtract" type="Button" parent="Purple/Count" unique_id=1372275939]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 25.0
+offset_right = 19.0
+offset_bottom = 56.0
+text = "<"
+
+[node name="add" type="Button" parent="Purple/Count" unique_id=399984230]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 25.0
+offset_right = 107.0
+offset_bottom = 56.0
+text = ">"
+
+[node name="Text" type="Panel" parent="Purple/Count" unique_id=1579899549]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 25.0
+offset_right = 87.0
+offset_bottom = 56.0
+
+[node name="count" type="Label" parent="Purple/Count/Text" unique_id=1245075968]
+layout_mode = 0
+offset_right = 66.0
+offset_bottom = 31.0
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="Panel" parent="Purple" unique_id=740442015]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.99200004
+anchor_right = 1.0
+anchor_bottom = 1.2290001
+offset_left = -6.1035156e-05
+offset_top = -6.215973
+offset_right = -6.1035156e-05
+offset_bottom = 0.557991
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="Purple/Text" unique_id=1594017396]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 109.0
+offset_bottom = 29.0
+text = "Purple - 30$"
+
+[node name="Background" type="AnimatedSprite2D" parent="Purple" unique_id=369871018]
+position = Vector2(53.99997, 49.765015)
+scale = Vector2(0.26108366, 0.35597774)
+sprite_frames = SubResource("SpriteFrames_fplyo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="Purple" unique_id=730094526]
+position = Vector2(52.99997, 48)
+scale = Vector2(1.0000001, 1)
+sprite_frames = SubResource("SpriteFrames_vagoo")
+
+[node name="White" type="Panel" parent="." unique_id=2068820337]
+layout_mode = 0
+offset_left = 266.0
+offset_top = 6.0
+offset_right = 374.0
+offset_bottom = 104.0
+
+[node name="Count" type="Panel" parent="White" unique_id=774360937]
+layout_mode = 0
+offset_top = 97.0
+offset_right = 108.0
+offset_bottom = 154.0
+
+[node name="subtract" type="Button" parent="White/Count" unique_id=1373610919]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 25.0
+offset_right = 19.0
+offset_bottom = 56.0
+text = "<"
+
+[node name="add" type="Button" parent="White/Count" unique_id=1650173256]
+layout_mode = 0
+offset_left = 89.0
+offset_top = 25.0
+offset_right = 107.0
+offset_bottom = 56.0
+text = ">"
+
+[node name="Text" type="Panel" parent="White/Count" unique_id=877141105]
+layout_mode = 0
+offset_left = 21.0
+offset_top = 25.0
+offset_right = 87.0
+offset_bottom = 56.0
+
+[node name="count" type="Label" parent="White/Count/Text" unique_id=435875410]
+layout_mode = 0
+offset_right = 66.0
+offset_bottom = 31.0
+text = "0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Text" type="Panel" parent="White" unique_id=1458681666]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.99200004
+anchor_right = 1.0
+anchor_bottom = 1.2290001
+offset_left = -6.1035156e-05
+offset_top = -6.215973
+offset_right = -6.1035156e-05
+offset_bottom = 0.557991
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Label" type="Label" parent="White/Text" unique_id=1128133575]
+layout_mode = 0
+offset_left = 8.0
+offset_top = 6.0
+offset_right = 109.0
+offset_bottom = 29.0
+text = "White - 50$"
+
+[node name="Background" type="AnimatedSprite2D" parent="White" unique_id=1436530535]
+position = Vector2(53.99997, 49.765015)
+scale = Vector2(0.26108366, 0.35597774)
+sprite_frames = SubResource("SpriteFrames_fplyo")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="White" unique_id=742307722]
+position = Vector2(49, 47)
+scale = Vector2(1.0000001, 1)
+sprite_frames = SubResource("SpriteFrames_aefrr")
+
+[node name="BuyPanel" type="Panel" parent="." unique_id=64178112]
+layout_mode = 0
+offset_left = 919.0
+offset_top = 453.0
+offset_right = 1057.0
+offset_bottom = 493.0
+
+[node name="Buy" type="Button" parent="BuyPanel" unique_id=122802571]
+layout_mode = 0
+offset_left = 98.0
+offset_top = 5.0
+offset_right = 136.0
+offset_bottom = 36.0
+text = "Buy"
+
+[node name="Count" type="Label" parent="BuyPanel" unique_id=97099052]
+layout_mode = 0
+offset_left = 2.0
+offset_right = 95.0
+offset_bottom = 40.0
+text = "$0"
+horizontal_alignment = 1
+vertical_alignment = 1

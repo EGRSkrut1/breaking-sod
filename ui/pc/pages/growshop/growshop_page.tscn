@@ -1,0 +1,87 @@
+[gd_scene format=3 uid="uid://cte2dtefi0wub"]
+
+[ext_resource type="Script" uid="uid://b4j3mqhf658ys" path="res://ui/pc/pages/growshop/growshop_page.gd" id="1_x5w4u"]
+[ext_resource type="PackedScene" uid="uid://bqko6lq7eplwv" path="res://ui/pc/pages/growshop/equipment/growshop_equipment_page.tscn" id="2_74xm4"]
+[ext_resource type="Texture2D" uid="uid://caeta86a7oev0" path="res://assets/backgrounds_pc/white_background.jpg" id="2_s5gnb"]
+[ext_resource type="PackedScene" uid="uid://bo85wmer32jr3" path="res://ui/pc/pages/growshop/plants/growshop_plants_page.tscn" id="3_krqx3"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_311lc"]
+atlas = ExtResource("2_s5gnb")
+region = Rect2(101, 134, 101, 67)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_xv80s"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_311lc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="GrowShop" type="Panel" unique_id=622371578]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -532.4875
+offset_top = -269.2525
+offset_right = 532.4875
+offset_bottom = 269.2525
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_x5w4u")
+
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=1749422363]
+position = Vector2(532.4875, 269.2525)
+scale = Vector2(10.514852, 7.9999995)
+sprite_frames = SubResource("SpriteFrames_xv80s")
+
+[node name="TopPanel" type="Panel" parent="." unique_id=175906971]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 1062.0
+offset_bottom = 40.0
+
+[node name="Plants" type="Button" parent="TopPanel" unique_id=116805258]
+layout_mode = 0
+offset_left = 3.0
+offset_top = 2.0
+offset_right = 68.0
+offset_bottom = 33.0
+text = "Plants"
+
+[node name="Equipment" type="Button" parent="TopPanel" unique_id=1564232612]
+layout_mode = 0
+offset_left = 76.0
+offset_top = 2.0
+offset_right = 169.0
+offset_bottom = 33.0
+text = "Equipment"
+
+[node name="Money" type="Label" parent="TopPanel" unique_id=2107919827]
+layout_mode = 0
+offset_left = 960.0
+offset_top = 4.0
+offset_right = 1052.0
+offset_bottom = 33.0
+text = "$0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="EquipmentPage" parent="." unique_id=995680975 instance=ExtResource("2_74xm4")]
+layout_mode = 0
+offset_left = 3.4874878
+offset_top = 41.252502
+offset_right = 1062.4875
+offset_bottom = 536.2525
+
+[node name="PlantsPage" parent="." unique_id=1039430811 instance=ExtResource("3_krqx3")]
+layout_mode = 0
+offset_left = 3.4874878
+offset_top = 41.252502
+offset_right = 1062.4875
+offset_bottom = 536.2525

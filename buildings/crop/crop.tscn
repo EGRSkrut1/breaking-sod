@@ -1,0 +1,52 @@
+[gd_scene format=3 uid="uid://ctxhe6nesicqd"]
+
+[ext_resource type="Script" uid="uid://bnvispvdgxepo" path="res://buildings/crop/crop.gd" id="1_wgfa3"]
+[ext_resource type="Texture2D" uid="uid://vw2suov4xnto" path="res://assets/Objects/cropwatered.png" id="2_nst87"]
+[ext_resource type="Texture2D" uid="uid://dbmg7iofs161n" path="res://assets/Objects/crop.png" id="2_wgfa3"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_wgfa3"]
+size = Vector2(24.06015, 14.884079)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d7y2n"]
+atlas = ExtResource("2_nst87")
+region = Rect2(0, 0, 1280, 1280)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5ysp"]
+atlas = ExtResource("2_wgfa3")
+region = Rect2(0, 0, 1280, 1280)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_nst87"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d7y2n")
+}],
+"loop": true,
+"name": &"soil",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5ysp")
+}],
+"loop": true,
+"name": &"watered soil",
+"speed": 5.0
+}]
+
+[node name="Crop" type="StaticBody2D" unique_id=1946037127]
+script = ExtResource("1_wgfa3")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1058309117]
+light_mask = 3
+visibility_layer = 3
+position = Vector2(0, 1.1232982)
+scale = Vector2(0.665, 0.6884267)
+shape = SubResource("RectangleShape2D_wgfa3")
+debug_color = Color(1.2273341e-06, 0.6513308, 0.04441142, 0.41960785)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=304917707]
+position = Vector2(1.4901161e-08, 0)
+scale = Vector2(0.012734375, 0.02)
+sprite_frames = SubResource("SpriteFrames_nst87")
+animation = &"watered soil"

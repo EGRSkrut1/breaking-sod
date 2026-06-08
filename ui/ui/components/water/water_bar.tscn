@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://8lswqnly3wx8"]
+
+[ext_resource type="Texture2D" uid="uid://bldyptau0utkv" path="res://assets/Objects/watering can.png" id="1_a28fp"]
+[ext_resource type="Script" uid="uid://dx3xcsche2ele" path="res://ui/ui/components/water/water_bar.gd" id="1_lw0xo"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_lw0xo"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="WaterBar" type="Panel" unique_id=1673235818]
+offset_left = 962.0
+offset_top = 466.0
+offset_right = 1151.0
+offset_bottom = 648.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_lw0xo")
+script = ExtResource("1_lw0xo")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=2144278546]
+position = Vector2(106.849976, 82.60004)
+scale = Vector2(0.351, 0.356)
+texture = ExtResource("1_a28fp")
+
+[node name="ProgressBar" type="ProgressBar" parent="." unique_id=2058395681]
+layout_mode = 0
+offset_left = 91.99998
+offset_top = 150.99998
+offset_right = 164.81174
+offset_bottom = 175.4276
+rotation = 4.712389
+theme_override_font_sizes/font_size = 8
+step = 1.0

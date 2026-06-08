@@ -1,0 +1,36 @@
+[gd_scene format=3 uid="uid://fxb2lv8h4qiw"]
+
+[ext_resource type="Script" uid="uid://d2xjo56m67ciq" path="res://ui/ui/components/states/states_panel.gd" id="1_d3tp3"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d3tp3"]
+bg_color = Color(0.6, 0.6, 0.6, 0)
+
+[node name="StatesPanel" type="Panel" unique_id=525175779]
+offset_right = 138.0
+offset_bottom = 61.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_d3tp3")
+script = ExtResource("1_d3tp3")
+
+[node name="Energy" type="ProgressBar" parent="." unique_id=1442958233]
+layout_mode = 0
+offset_top = 2.0
+offset_right = 106.0
+offset_bottom = 29.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Energy" unique_id=1725070778]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="Sleep" type="ProgressBar" parent="." unique_id=760699011]
+layout_mode = 0
+offset_top = 32.0
+offset_right = 105.0
+offset_bottom = 59.0
+show_percentage = false
+
+[node name="Label" type="Label" parent="Sleep" unique_id=1367652317]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0

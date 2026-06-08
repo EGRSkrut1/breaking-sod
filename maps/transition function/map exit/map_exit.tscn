@@ -1,0 +1,43 @@
+[gd_scene format=3 uid="uid://ckhl1x1o0w7ln"]
+
+[ext_resource type="Script" uid="uid://bxnpltsowjmi8" path="res://maps/transition function/map exit/map_exit.gd" id="1_brwke"]
+[ext_resource type="Texture2D" uid="uid://d0o7i33mdlt2p" path="res://assets/Objects/chest.png" id="2_30l0u"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nej5a"]
+atlas = ExtResource("2_30l0u")
+region = Rect2(0, 0, 32, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_p8py7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nej5a")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_30l0u"]
+
+[node name="MapExit" type="Area2D" unique_id=320086748]
+script = ExtResource("1_brwke")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=185002547]
+sprite_frames = SubResource("SpriteFrames_p8py7")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1351983438]
+shape = SubResource("RectangleShape2D_30l0u")
+
+[node name="Label" type="Label" parent="." unique_id=872627443]
+offset_left = -35.0
+offset_top = 4.0
+offset_right = 32.0
+offset_bottom = 27.0
+
+[node name="Name" type="Label" parent="." unique_id=545134499]
+offset_left = -35.0
+offset_top = 4.0
+offset_right = 32.0
+offset_bottom = 27.0
+text = "Map exit"

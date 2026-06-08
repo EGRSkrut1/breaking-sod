@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://dcre2u8tiyrp7"]
+
+[ext_resource type="Script" uid="uid://oyi7xpierg6s" path="res://ui/ui/components/tooltip/tooltip.gd" id="1_hb2tw"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hb2tw"]
+bg_color = Color(0.17254902, 0.17254902, 0.17254902, 0.3529412)
+corner_detail = 16
+
+[node name="Tooltip" type="Panel" unique_id=1603126694]
+anchors_preset = -1
+anchor_right = 0.14500001
+anchor_bottom = 0.11100001
+offset_left = 1.0
+offset_right = 0.95999146
+offset_bottom = 0.07199097
+size_flags_horizontal = 3
+size_flags_vertical = 3
+theme_override_styles/panel = SubResource("StyleBoxFlat_hb2tw")
+script = ExtResource("1_hb2tw")
+
+[node name="Label" type="Label" parent="." unique_id=1338728787]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.99535483, 0.99564177, 0.9957649, 1)
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

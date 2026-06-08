@@ -1,0 +1,86 @@
+[gd_scene format=3 uid="uid://dlfi0nl3oktks"]
+
+[ext_resource type="Script" uid="uid://pvobjuo8du2s" path="res://ui/map choice/map_choice_ui.gd" id="1_sbsyp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_qxd52"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": null
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="MapChoiceUI" type="CanvasLayer" unique_id=322771056]
+script = ExtResource("1_sbsyp")
+
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=1261133390]
+position = Vector2(573.635, 321.76498)
+scale = Vector2(2.6274135, 2.1419556)
+sprite_frames = SubResource("SpriteFrames_qxd52")
+
+[node name="Maps" type="Panel" parent="." unique_id=676809714]
+offset_left = 39.0
+offset_top = 30.0
+offset_right = 1108.0
+offset_bottom = 614.0
+
+[node name="City" type="Panel" parent="Maps" unique_id=990131968]
+layout_mode = 0
+offset_left = 215.0
+offset_top = 24.0
+offset_right = 369.0
+offset_bottom = 163.0
+
+[node name="Enter" type="Button" parent="Maps/City" unique_id=1422572565]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Maps/City" unique_id=2034561500]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "City"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Forest" type="Panel" parent="Maps" unique_id=682678002]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 22.0
+offset_right = 174.0
+offset_bottom = 163.0
+
+[node name="Enter" type="Button" parent="Maps/Forest" unique_id=323458316]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -22.0
+grow_horizontal = 2
+grow_vertical = 0
+
+[node name="Label" type="Label" parent="Maps/Forest" unique_id=1138908077]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Forest"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CloseButton" type="Button" parent="." unique_id=121781342]
+offset_right = 8.0
+offset_bottom = 8.0

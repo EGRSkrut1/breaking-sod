@@ -1,0 +1,61 @@
+[gd_scene format=3 uid="uid://b65e4atryo71q"]
+
+[ext_resource type="Script" uid="uid://b4hovi8h5bp4j" path="res://maps/city/city.gd" id="1_hpa3k"]
+[ext_resource type="PackedScene" uid="uid://ckhl1x1o0w7ln" path="res://maps/transition function/map exit/map_exit.tscn" id="2_21oll"]
+[ext_resource type="Script" uid="uid://bdl14isnwyrtn" path="res://maps/components/grid manager/grid_manager.gd" id="2_le85w"]
+[ext_resource type="PackedScene" uid="uid://cjil8nlrcbs4b" path="res://ui/ui/UI.tscn" id="2_m7k8b"]
+[ext_resource type="Script" uid="uid://3h8ajrrkcu8p" path="res://maps/components/water manager/water_manager.gd" id="2_rccp5"]
+[ext_resource type="Script" uid="uid://b3oc7a15skxvm" path="res://maps/components/build manager/build_manager.gd" id="3_tqwcp"]
+[ext_resource type="Script" uid="uid://dljyjlsts7nlo" path="res://maps/components/preview manager/preview_manager.gd" id="4_dv6je"]
+[ext_resource type="PackedScene" uid="uid://clo2n72f3jyv6" path="res://entity/player/base/player.tscn" id="4_ky23g"]
+[ext_resource type="Script" uid="uid://ble7glfomiyd7" path="res://maps/components/z index manager/z_index_manager.gd" id="4_x16yh"]
+[ext_resource type="PackedScene" uid="uid://b1lmlnwcu507b" path="res://ui/atm/atm_ui.tscn" id="5_ciawh"]
+[ext_resource type="Script" uid="uid://d1thd4hkrmxw" path="res://maps/components/save load manager/save_load_manager.gd" id="5_nkk06"]
+[ext_resource type="PackedScene" uid="uid://t67e2c3pte48" path="res://ui/customer/customer_ui.tscn" id="7_3i1jh"]
+[ext_resource type="PackedScene" uid="uid://co3rmtie2kkkw" path="res://menus/console/console.tscn" id="9_3i1jh"]
+[ext_resource type="PackedScene" uid="uid://dlfi0nl3oktks" path="res://ui/map choice/map_choice_ui.tscn" id="10_tqwcp"]
+[ext_resource type="PackedScene" uid="uid://rr0p3vf3dr2p" path="res://buildings/atm/atm.tscn" id="12_nkk06"]
+[ext_resource type="PackedScene" uid="uid://i416wg6f7hl5" path="res://entity/customer/customer.tscn" id="13_3i1jh"]
+
+[node name="City" type="Node2D" unique_id=1624249067]
+script = ExtResource("1_hpa3k")
+
+[node name="GridManager" type="Node2D" parent="." unique_id=382949359]
+script = ExtResource("2_le85w")
+
+[node name="WaterManager" type="Node2D" parent="." unique_id=470924375]
+script = ExtResource("2_rccp5")
+
+[node name="ZIndexManager" type="Node2D" parent="." unique_id=996635777]
+script = ExtResource("4_x16yh")
+
+[node name="BuildManager" type="Node2D" parent="." unique_id=964876825]
+script = ExtResource("3_tqwcp")
+
+[node name="PreviewManager" type="Node2D" parent="." unique_id=161969742]
+script = ExtResource("4_dv6je")
+
+[node name="SaveLoadManager" type="Node2D" parent="." unique_id=937695968]
+script = ExtResource("5_nkk06")
+
+[node name="Player" parent="." unique_id=5184255 instance=ExtResource("4_ky23g")]
+position = Vector2(0, -178)
+
+[node name="CustomerUI" parent="." unique_id=1198666584 instance=ExtResource("7_3i1jh")]
+
+[node name="UI" parent="." unique_id=666575480 instance=ExtResource("2_m7k8b")]
+
+[node name="AtmUI" parent="." unique_id=1174427888 instance=ExtResource("5_ciawh")]
+
+[node name="Console" parent="." unique_id=1319492855 instance=ExtResource("9_3i1jh")]
+
+[node name="MapChoiceUI" parent="." unique_id=322771056 instance=ExtResource("10_tqwcp")]
+
+[node name="MapExit" parent="." unique_id=1402355691 instance=ExtResource("2_21oll")]
+position = Vector2(0, -197)
+
+[node name="ATM" parent="." unique_id=1911647965 instance=ExtResource("12_nkk06")]
+position = Vector2(-200, -4)
+
+[node name="Customer" parent="." unique_id=1491910938 instance=ExtResource("13_3i1jh")]
+position = Vector2(-141, 90)

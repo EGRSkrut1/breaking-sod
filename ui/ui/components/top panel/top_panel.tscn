@@ -1,0 +1,145 @@
+[gd_scene format=3 uid="uid://bvkdf0q4k2880"]
+
+[ext_resource type="Script" uid="uid://gxa5gtnsbbf4" path="res://ui/ui/components/top panel/top_panel.gd" id="1_8tact"]
+[ext_resource type="Texture2D" uid="uid://1f1irxpswjs3" path="res://assets/icon/dollar.png" id="1_j7jar"]
+[ext_resource type="Texture2D" uid="uid://c6vuqfmegm6ll" path="res://assets/icon/card.png" id="2_8tact"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_8tact"]
+
+[node name="TopPanel" type="Panel" unique_id=2080266103]
+custom_minimum_size = Vector2(0, 40)
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 10.0
+offset_bottom = 50.0
+grow_horizontal = 2
+script = ExtResource("1_8tact")
+
+[node name="Suspicion" type="ProgressBar" parent="." unique_id=1497649967]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 360.735
+offset_top = -29.0
+offset_right = 395.95996
+offset_bottom = -6.5
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.42, 0.465)
+pivot_offset = Vector2(-2.5, 0)
+theme_override_colors/font_color = Color(0.95, 0.95, 0.95, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 8
+step = 1.0
+show_percentage = false
+
+[node name="0" type="Label" parent="Suspicion" unique_id=1783397743]
+layout_mode = 0
+offset_left = 0.5
+offset_top = -6.52
+offset_right = 69.88782
+offset_bottom = 118.48
+scale = Vector2(0.452, 0.5)
+theme_override_font_sizes/font_size = 44
+text = "|
+0%"
+
+[node name="25" type="Label" parent="Suspicion" unique_id=1748428430]
+layout_mode = 0
+offset_left = 292.645
+offset_top = -6.52
+offset_right = 380.645
+offset_bottom = 118.48
+scale = Vector2(0.452, 0.5)
+theme_override_font_sizes/font_size = 44
+text = "|
+25%"
+
+[node name="50" type="Label" parent="Suspicion" unique_id=1195109205]
+layout_mode = 0
+offset_left = 587.74994
+offset_top = -6.520001
+offset_right = 675.74994
+offset_bottom = 118.479996
+scale = Vector2(0.452, 0.5)
+theme_override_font_sizes/font_size = 44
+text = "|
+50%"
+
+[node name="75" type="Label" parent="Suspicion" unique_id=1582758821]
+layout_mode = 0
+offset_left = 885.645
+offset_top = -6.52
+offset_right = 973.645
+offset_bottom = 118.48
+scale = Vector2(0.452, 0.5)
+theme_override_font_sizes/font_size = 44
+text = "|
+75%"
+
+[node name="100" type="Label" parent="Suspicion" unique_id=1128479129]
+layout_mode = 0
+offset_left = 1173.755
+offset_top = -6.52
+offset_right = 1286.755
+offset_bottom = 118.48
+scale = Vector2(0.452, 0.5)
+theme_override_font_sizes/font_size = 44
+text = "|
+100%"
+
+[node name="Money2" type="Sprite2D" parent="." unique_id=62193192]
+position = Vector2(1008, 9.559999)
+scale = Vector2(0.029, 0.029)
+texture = ExtResource("1_j7jar")
+
+[node name="Card" type="Sprite2D" parent="." unique_id=1566610142]
+position = Vector2(1007.56006, 27.56)
+scale = Vector2(0.029, 0.029)
+texture = ExtResource("2_8tact")
+
+[node name="MoneyLabel" type="Label" parent="." unique_id=548926060]
+layout_mode = 0
+offset_left = 1027.0
+offset_top = -4.0
+offset_right = 1093.0
+offset_bottom = 19.0
+text = "$0"
+
+[node name="CardMoneyLabel" type="Label" parent="." unique_id=979834122]
+layout_mode = 0
+offset_left = 1027.0
+offset_top = 16.0
+offset_right = 1091.0
+offset_bottom = 39.0
+text = "$0"
+
+[node name="calendar" type="Button" parent="." unique_id=780494797]
+layout_mode = 0
+offset_left = 902.0
+offset_top = 3.0
+offset_right = 956.0
+offset_bottom = 36.0
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="calendar" unique_id=607750932]
+sprite_frames = SubResource("SpriteFrames_8tact")
+
+[node name="time" type="Label" parent="calendar" unique_id=85780250]
+layout_mode = 0
+offset_left = 4.0
+offset_top = 4.0
+offset_right = 49.0
+offset_bottom = 17.0
+theme_override_font_sizes/font_size = 8
+text = "time"
+
+[node name="date" type="Label" parent="calendar" unique_id=831908318]
+layout_mode = 0
+offset_left = 6.0
+offset_top = 16.0
+offset_right = 46.0
+offset_bottom = 29.0
+theme_override_font_sizes/font_size = 8
+text = "date"

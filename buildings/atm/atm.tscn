@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://rr0p3vf3dr2p"]
+
+[ext_resource type="Script" uid="uid://b7psifpbrexbk" path="res://buildings/atm/atm.gd" id="1_v6704"]
+[ext_resource type="Texture2D" uid="uid://bh22i8wpliewj" path="res://assets/Objects/laptop.png" id="2_7qxy1"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_jeraq"]
+size = Vector2(20, 18.233194)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bmor"]
+atlas = ExtResource("2_7qxy1")
+region = Rect2(79, 134, 177, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlnyd"]
+atlas = ExtResource("2_7qxy1")
+region = Rect2(273, 134, 177, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v051a"]
+atlas = ExtResource("2_7qxy1")
+region = Rect2(467, 134, 177, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hs41"]
+atlas = ExtResource("2_7qxy1")
+region = Rect2(665, 134, 177, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6gnq"]
+atlas = ExtResource("2_7qxy1")
+region = Rect2(859, 134, 177, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb3oq"]
+atlas = ExtResource("2_7qxy1")
+region = Rect2(1053, 134, 177, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_oxdwr"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bmor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlnyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v051a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hs41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6gnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xb3oq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6gnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hs41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v051a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlnyd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[node name="ATM" type="Area2D" unique_id=1911647965]
+script = ExtResource("1_v6704")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=242130817]
+position = Vector2(-2.3841858e-07, 3)
+scale = Vector2(1, -0.98721045)
+shape = SubResource("RectangleShape2D_jeraq")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=690956658]
+position = Vector2(2.8610225e-06, 4.7683716e-07)
+scale = Vector2(0.07, 0.07)
+sprite_frames = SubResource("SpriteFrames_oxdwr")
+
+[node name="Label" type="Label" parent="." unique_id=2043586250]
+offset_left = -6.0
+offset_top = 5.0
+offset_right = 26.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 6
+text = "ATM
+"
+metadata/_edit_use_anchors_ = true

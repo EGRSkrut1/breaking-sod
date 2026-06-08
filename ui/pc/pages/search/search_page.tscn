@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://couni2vjca5ul"]
+
+[ext_resource type="Script" uid="uid://cf5uo72xtm5b7" path="res://ui/pc/pages/search/search_page.gd" id="1_a3ttb"]
+[ext_resource type="Texture2D" uid="uid://caeta86a7oev0" path="res://assets/backgrounds_pc/white_background.jpg" id="2_xgo7w"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_311lc"]
+atlas = ExtResource("2_xgo7w")
+region = Rect2(101, 134, 101, 67)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_6mmwv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_311lc")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Search" type="Panel" unique_id=1732020418]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -532.4875
+offset_top = -269.2525
+offset_right = 532.4875
+offset_bottom = 269.2525
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_a3ttb")
+
+[node name="Background" type="AnimatedSprite2D" parent="." unique_id=318159644]
+position = Vector2(532.4875, 269.2525)
+scale = Vector2(10.514852, 7.9999995)
+sprite_frames = SubResource("SpriteFrames_6mmwv")
+
+[node name="SearchInput" type="LineEdit" parent="." unique_id=635749008]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -133.85748
+offset_top = -16.357513
+offset_right = 135.14252
+offset_bottom = 14.642487
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=2024241346]
+layout_mode = 0
+offset_left = 399.63
+offset_top = 283.895
+offset_right = 666.63
+offset_bottom = 413.895
+
+[node name="ResultsList" type="VBoxContainer" parent="ScrollContainer" unique_id=187989229]
+layout_mode = 2

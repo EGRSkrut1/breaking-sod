@@ -1,0 +1,24 @@
+[gd_scene format=3 uid="uid://pc1u4t4k2xlm"]
+
+[ext_resource type="Script" uid="uid://ch7hogwjctx18" path="res://ui/ui/components/research/research_menu.gd" id="1_wfgf3"]
+
+[node name="ResearchMenu" type="Panel" unique_id=427233605]
+offset_right = 343.0
+offset_bottom = 538.0
+script = ExtResource("1_wfgf3")
+
+[node name="ScrollContainer" type="ScrollContainer" parent="." unique_id=1870428022]
+layout_mode = 0
+offset_right = 343.0
+offset_bottom = 538.0
+
+[node name="ResearchList" type="VBoxContainer" parent="ScrollContainer" unique_id=249534458]
+layout_mode = 2
+
+[node name="CloseButton" type="Button" parent="." unique_id=1184512930]
+layout_mode = 0
+offset_left = 324.0
+offset_top = 1.0
+offset_right = 342.0
+offset_bottom = 32.0
+text = "X"

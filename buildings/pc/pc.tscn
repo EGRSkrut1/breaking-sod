@@ -1,0 +1,92 @@
+[gd_scene format=3 uid="uid://cxxfl7ulxq8m6"]
+
+[ext_resource type="Script" uid="uid://cm2qru2tqanr7" path="res://buildings/pc/pc.gd" id="1_8bmor"]
+[ext_resource type="Texture2D" uid="uid://bh22i8wpliewj" path="res://assets/Objects/laptop.png" id="3_tlnyd"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8bmor"]
+atlas = ExtResource("3_tlnyd")
+region = Rect2(79, 134, 177, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tlnyd"]
+atlas = ExtResource("3_tlnyd")
+region = Rect2(273, 134, 177, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v051a"]
+atlas = ExtResource("3_tlnyd")
+region = Rect2(467, 134, 177, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_0hs41"]
+atlas = ExtResource("3_tlnyd")
+region = Rect2(665, 134, 177, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k6gnq"]
+atlas = ExtResource("3_tlnyd")
+region = Rect2(859, 134, 177, 180)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xb3oq"]
+atlas = ExtResource("3_tlnyd")
+region = Rect2(1053, 134, 177, 180)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_0hs41"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8bmor")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlnyd")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v051a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hs41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6gnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xb3oq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k6gnq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_0hs41")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v051a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tlnyd")
+}],
+"loop": true,
+"name": &"default",
+"speed": 8.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_7ftsu"]
+size = Vector2(20, 18.233194)
+
+[node name="PC" type="Area2D" unique_id=10691940]
+position = Vector2(90, 25)
+script = ExtResource("1_8bmor")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=1522801321]
+scale = Vector2(0.07, 0.07)
+sprite_frames = SubResource("SpriteFrames_0hs41")
+frame_progress = 0.95179254
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1310701818]
+position = Vector2(-2.3841858e-07, 3)
+scale = Vector2(1, -0.98721045)
+shape = SubResource("RectangleShape2D_7ftsu")
+
+[node name="Label" type="Label" parent="." unique_id=940383964]
+offset_left = -12.0
+offset_top = 5.0
+offset_right = 20.0
+offset_bottom = 28.0
+theme_override_font_sizes/font_size = 6
+text = "seed shop
+"
