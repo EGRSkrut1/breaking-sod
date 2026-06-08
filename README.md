@@ -31,7 +31,7 @@
 
 ### 💤 Player Stats
 - **Energy** — consumed by digging, restored by sleeping
-- ** Sleep ** - depletes over time (maximum 48 game hours), when depleted, you lose consciousness, the more you don't sleep, the more you will sleep, minimum 4 hours, maximum 16 hours
+- **Sleep** - depletes over time (maximum 48 game hours), when depleted, you lose consciousness, the more you don't sleep, the more you will sleep, minimum 4 hours, maximum 16 hours
 - **Suspicion** — increases with illegal sales, attracts police attention
 
 ### 💾 Save System
