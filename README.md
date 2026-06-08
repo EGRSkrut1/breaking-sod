@@ -55,7 +55,7 @@
 | Open Build Menu | Click Build button in UI |
 | Cancel / Close menus | ESC |
 | Open Console | ` (tilde) |
-| Toggle Irrigation system| | F |
+| Toggle Irrigation system| F |
 
 ---
 
@@ -72,7 +72,6 @@
 | Graver | Process raw plants → Lvl1 |
 | Dryer | Dry Lvl1 plants → Lvl2 |
 | Wrapper | Pack Lvl2 plants → Lvl3 |
-| Laptop | Access to darknet (alternative to PC) |
 
 ---
 
