@@ -177,7 +177,6 @@ func execute_command(text: String):
 			_add_output_line("  clear - Clear output")
 			_add_output_line("  close - Close console")
 		
-		# Money commands
 		"add_money":
 			if parts.size() > 1:
 				var amount = int(parts[1])
@@ -235,16 +234,18 @@ func execute_command(text: String):
 		"add_sleep":
 			if parts.size() > 1:
 				var amount = int(parts[1])
-				GameManager.restore_sleep(amount)
-				_add_output_line("Added " + str(amount) + " sleep")
+				GameManager.sleep = min(GameManager.sleep + amount, GameManager.max_sleep)
+				GameManager.sleep_changed.emit()
+				_add_output_line("Added " + str(amount) + " sleep, now " + str(GameManager.sleep))
 			else:
 				_add_output_line("Usage: add_sleep <amount>")
 		
 		"remove_sleep":
 			if parts.size() > 1:
 				var amount = int(parts[1])
-				GameManager.use_sleep(amount)
-				_add_output_line("Removed " + str(amount) + " sleep")
+				GameManager.sleep = max(GameManager.sleep - amount, 0)
+				GameManager.sleep_changed.emit()
+				_add_output_line("Removed " + str(amount) + " sleep, now " + str(GameManager.sleep))
 			else:
 				_add_output_line("Usage: remove_sleep <amount>")
 		
@@ -285,7 +286,6 @@ func execute_command(text: String):
 			else:
 				_add_output_line("Usage: remove_water <amount>")
 		
-		# Give products - Green
 		"give_green":
 			GameManager.add_inventory_item({"type": "green", "name": "Green Weed", "price": 15})
 			_add_output_line("Gave Green Weed ($15)")
@@ -298,8 +298,6 @@ func execute_command(text: String):
 		"give_green_lvl3":
 			GameManager.add_inventory_item({"type": "green_lvl3", "name": "Green Weed Lvl3", "price": 45})
 			_add_output_line("Gave Green Weed Lvl3 ($45)")
-		
-		# Give products - Purple
 		"give_purple":
 			GameManager.add_inventory_item({"type": "purple", "name": "Purple Haze", "price": 30})
 			_add_output_line("Gave Purple Haze ($30)")
@@ -312,8 +310,6 @@ func execute_command(text: String):
 		"give_purple_lvl3":
 			GameManager.add_inventory_item({"type": "purple_lvl3", "name": "Purple Haze Lvl3", "price": 90})
 			_add_output_line("Gave Purple Haze Lvl3 ($90)")
-		
-		# Give products - White
 		"give_white":
 			GameManager.add_inventory_item({"type": "white", "name": "White Widow", "price": 50})
 			_add_output_line("Gave White Widow ($50)")
@@ -326,8 +322,6 @@ func execute_command(text: String):
 		"give_white_lvl3":
 			GameManager.add_inventory_item({"type": "white_lvl3", "name": "White Widow Lvl3", "price": 150})
 			_add_output_line("Gave White Widow Lvl3 ($150)")
-		
-		# Give resources
 		"give_tin_can":
 			GameManager.add_inventory_item({"type": "tin_can", "name": "Tin Can", "price": 1})
 			_add_output_line("Gave Tin Can ($1)")
@@ -337,8 +331,6 @@ func execute_command(text: String):
 		"give_crystal":
 			GameManager.add_inventory_item({"type": "crystal", "name": "Crystal", "price": 100})
 			_add_output_line("Gave Crystal ($100)")
-		
-		# Give buildings
 		"give_crop":
 			GameManager.add_inventory_item({"type": "crop", "name": "Crop", "price": 10})
 			_add_output_line("Gave Crop ($10)")
@@ -369,8 +361,6 @@ func execute_command(text: String):
 		"give_wrapper":
 			GameManager.add_inventory_item({"type": "wrapper", "name": "Wrapper", "price": 300})
 			_add_output_line("Gave Wrapper ($300)")
-		
-		# Give seeds
 		"give_green_seed":
 			GameManager.add_seeds("green", 1)
 			_add_output_line("Gave 1 Green Weed Seed")
@@ -381,7 +371,6 @@ func execute_command(text: String):
 			GameManager.add_seeds("white", 1)
 			_add_output_line("Gave 1 White Widow Seed")
 		
-		# Unlock commands
 		"unlock_seed":
 			if parts.size() > 1:
 				var seed_type = parts[1].to_lower()
@@ -404,7 +393,6 @@ func execute_command(text: String):
 			else:
 				_add_output_line("Usage: unlock_equip <graver/dryer/wrapper/laptop/bed>")
 		
-		# Time commands
 		"time":
 			if parts.size() > 2:
 				var hour = int(parts[1])

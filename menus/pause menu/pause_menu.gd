@@ -5,9 +5,12 @@ extends Control
 @onready var settings_button = $VBoxContainer/SettingsButton
 @onready var main_menu_button = $VBoxContainer/MainMenuButton
 @onready var quit_button = $VBoxContainer/QuitButton
+@onready var settings = $Settings
 
 func _ready():
 	visible = false
+	if settings:
+		settings.visible = false
 	
 	if continue_button:
 		continue_button.pressed.connect(_on_continue_pressed)
@@ -54,10 +57,9 @@ func _on_save_pressed():
 		ui.show_floating_text("Game Saved", Color(0, 1, 0), Vector2(400, 300))
 
 func _on_settings_pressed():
-	var settings = load("res://menus/settings/settings.tscn").instantiate()
-	get_tree().current_scene.add_child(settings)
-	settings.visible = true
-	visible = false
+	if settings:
+		settings.visible = true
+		visible = false
 
 func _on_main_menu_pressed():
 	GameManager.save_game()
@@ -68,5 +70,8 @@ func _on_quit_pressed():
 
 func _input(event):
 	if event.is_action_pressed("cancel") and visible:
-		visible = false
+		if settings and settings.visible:
+			settings.visible = false
+		else:
+			visible = false
 		get_viewport().set_input_as_handled()

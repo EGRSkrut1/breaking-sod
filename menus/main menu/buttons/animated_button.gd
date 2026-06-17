@@ -3,7 +3,6 @@ extends TextureButton
 @onready var anim_sprite = $AnimatedSprite2D
 @export var action: String = ""
 
-# Initializes animated button
 func _ready():
 	custom_minimum_size = Vector2(192, 48)
 	anim_sprite.scale = Vector2(3, 3)
@@ -12,7 +11,6 @@ func _ready():
 	pressed.connect(_on_pressed)
 	print("[AnimatedButton] Ready, action: ", action)
 
-# Handles button press with animation
 func _on_pressed():
 	anim_sprite.speed_scale = 8.0
 	anim_sprite.play("click")
@@ -29,14 +27,14 @@ func _on_pressed():
 		"new_game":
 			print("[AnimatedButton] Starting new game")
 			GameManager.new_game()
-			var result = get_tree().change_scene_to_file("res://maps/forest/forest.tscn")
-			print("[AnimatedButton] Load result: ", result)
+			get_tree().change_scene_to_file("res://maps/forest/forest.tscn")
 		"continue":
 			print("[AnimatedButton] Continuing game")
 			GameManager.load_game()
-			var result = get_tree().change_scene_to_file("res://maps/forest/forest.tscn")
-			print("[AnimatedButton] Load result: ", result)
+			get_tree().change_scene_to_file("res://maps/forest/forest.tscn")
 		"settings":
 			print("[AnimatedButton] Opening settings")
-			var result = get_tree().change_scene_to_file("res://menus/settings/settings.tscn")
-			print("[AnimatedButton] Load result: ", result)
+			var main = get_tree().current_scene
+			var settings = main.get_node_or_null("Settings")
+			if settings:
+				settings.visible = true

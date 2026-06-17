@@ -1,6 +1,27 @@
 [gd_scene format=3 uid="uid://d0gbadmd8auh0"]
 
-[ext_resource type="Script" uid="uid://cx344stbdm0a5" path="res://settings.gd" id="1_x2hje"]
+[ext_resource type="Script" uid="uid://cx344stbdm0a5" path="res://menus/settings/settings.gd" id="1_x2hje"]
 
-[node name="Settings" type="Node2D" unique_id=460653952]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2e4a5"]
+bg_color = Color(0.15487584, 0.15487605, 0.1548759, 0.9372549)
+
+[node name="Settings" type="CanvasLayer" unique_id=377787404]
 script = ExtResource("1_x2hje")
+
+[node name="Panel" type="Panel" parent="." unique_id=1153267876]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_2e4a5")
+
+[node name="CloseButton" type="Button" parent="Panel" unique_id=1376630576]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -18.0
+offset_bottom = 31.0
+grow_horizontal = 0
+text = "X"

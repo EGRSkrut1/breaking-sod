@@ -1,31 +1,33 @@
 [gd_scene format=3 uid="uid://83vehrgn6eku"]
 
-[ext_resource type="Script" uid="uid://dmdfy8e78k6n8" path="res://animated_button.gd" id="1_e5qqf"]
-[ext_resource type="Texture2D" uid="uid://c0gxt584s16m7" path="res://temp folder/Button Itch Pack/Start/Start1.png" id="1_glbon"]
-[ext_resource type="Texture2D" uid="uid://b32dxtxy23hw6" path="res://temp folder/Button Itch Pack/Start/Start2.png" id="2_nlkkf"]
-[ext_resource type="Texture2D" uid="uid://d01b200r4qwq" path="res://temp folder/Button Itch Pack/Start/Start3.png" id="3_qe12f"]
-[ext_resource type="Texture2D" uid="uid://b44ejury7ifg5" path="res://temp folder/Button Itch Pack/Start/Start4.png" id="4_8qtwp"]
-[ext_resource type="Texture2D" uid="uid://iv0nufpkbjkc" path="res://temp folder/Button Itch Pack/Start/Start5.png" id="5_dy7ct"]
-[ext_resource type="Texture2D" uid="uid://2kpehwdiynww" path="res://temp folder/Button Itch Pack/New game/New Game1.png" id="6_ojb7r"]
-[ext_resource type="Texture2D" uid="uid://lvbp5tufw1em" path="res://temp folder/Button Itch Pack/New game/New Game2.png" id="7_e5qqf"]
-[ext_resource type="Texture2D" uid="uid://bjxd03ov4wlim" path="res://temp folder/Button Itch Pack/New game/New Game3.png" id="8_7bbuq"]
-[ext_resource type="Texture2D" uid="uid://b7i8nvqduw2m3" path="res://temp folder/Button Itch Pack/New game/New Game4.png" id="9_saq78"]
-[ext_resource type="Texture2D" uid="uid://ba36pij8v2sw7" path="res://temp folder/Button Itch Pack/New game/New Game5.png" id="10_8uw0o"]
-[ext_resource type="Texture2D" uid="uid://4qi71wl02h7n" path="res://temp folder/Button Itch Pack/Settings/Settings1.png" id="11_ql5ya"]
-[ext_resource type="Texture2D" uid="uid://wdh52oxw5vk2" path="res://temp folder/Button Itch Pack/Settings/Settings2.png" id="12_ka3nr"]
-[ext_resource type="Texture2D" uid="uid://ct6t1q4smubau" path="res://temp folder/Button Itch Pack/Settings/Settings3.png" id="13_48knj"]
-[ext_resource type="Texture2D" uid="uid://kk7nu4hn7hp2" path="res://temp folder/Button Itch Pack/Settings/Settings4.png" id="14_m2y5l"]
-[ext_resource type="Texture2D" uid="uid://bv8cwrex0835m" path="res://temp folder/Button Itch Pack/Settings/Settings5.png" id="15_imjy1"]
-[ext_resource type="Texture2D" uid="uid://bfcaa8e1ssmsi" path="res://temp folder/Button Itch Pack/Quit/Quit1.png" id="16_u5051"]
-[ext_resource type="Texture2D" uid="uid://x7xu1dy4v6s0" path="res://temp folder/Button Itch Pack/Back/Back1.png" id="17_e5qqf"]
-[ext_resource type="Texture2D" uid="uid://co5lesdac38cd" path="res://temp folder/Button Itch Pack/Quit/Quit2.png" id="17_v2sba"]
-[ext_resource type="Texture2D" uid="uid://cq6218ctvndod" path="res://temp folder/Button Itch Pack/Back/Back2.png" id="18_7bbuq"]
-[ext_resource type="Texture2D" uid="uid://q17fpvw43wj8" path="res://temp folder/Button Itch Pack/Quit/Quit3.png" id="18_ai24q"]
-[ext_resource type="Texture2D" uid="uid://b12jfdht6j6b8" path="res://temp folder/Button Itch Pack/Quit/Quit4.png" id="19_qby1g"]
-[ext_resource type="Texture2D" uid="uid://dgg8kpaluf0ct" path="res://temp folder/Button Itch Pack/Back/Back3.png" id="19_saq78"]
-[ext_resource type="Texture2D" uid="uid://c6mipa5cjoevq" path="res://temp folder/Button Itch Pack/Quit/Quit5.png" id="20_04soa"]
-[ext_resource type="Texture2D" uid="uid://df4isnmjm3it3" path="res://temp folder/Button Itch Pack/Back/Back4.png" id="20_8uw0o"]
-[ext_resource type="Texture2D" uid="uid://cdtd8ad2j1gji" path="res://temp folder/Button Itch Pack/Back/Back5.png" id="21_ql5ya"]
+[ext_resource type="Script" uid="uid://dmdfy8e78k6n8" path="res://menus/main menu/buttons/animated_button.gd" id="1_e5qqf"]
+[ext_resource type="Texture2D" uid="uid://c0gxt584s16m7" path="res://assets/Button Itch Pack/Start/Start1.png" id="1_glbon"]
+[ext_resource type="Script" uid="uid://c3xx61y246g8x" path="res://menus/main menu/main_menu.gd" id="1_w2mh0"]
+[ext_resource type="Texture2D" uid="uid://b32dxtxy23hw6" path="res://assets/Button Itch Pack/Start/Start2.png" id="2_nlkkf"]
+[ext_resource type="Texture2D" uid="uid://d01b200r4qwq" path="res://assets/Button Itch Pack/Start/Start3.png" id="3_qe12f"]
+[ext_resource type="Texture2D" uid="uid://b44ejury7ifg5" path="res://assets/Button Itch Pack/Start/Start4.png" id="4_8qtwp"]
+[ext_resource type="Texture2D" uid="uid://iv0nufpkbjkc" path="res://assets/Button Itch Pack/Start/Start5.png" id="5_dy7ct"]
+[ext_resource type="Texture2D" uid="uid://2kpehwdiynww" path="res://assets/Button Itch Pack/New game/New Game1.png" id="6_ojb7r"]
+[ext_resource type="Texture2D" uid="uid://lvbp5tufw1em" path="res://assets/Button Itch Pack/New game/New Game2.png" id="7_e5qqf"]
+[ext_resource type="Texture2D" uid="uid://bjxd03ov4wlim" path="res://assets/Button Itch Pack/New game/New Game3.png" id="8_7bbuq"]
+[ext_resource type="Texture2D" uid="uid://b7i8nvqduw2m3" path="res://assets/Button Itch Pack/New game/New Game4.png" id="9_saq78"]
+[ext_resource type="Texture2D" uid="uid://ba36pij8v2sw7" path="res://assets/Button Itch Pack/New game/New Game5.png" id="10_8uw0o"]
+[ext_resource type="Texture2D" uid="uid://4qi71wl02h7n" path="res://assets/Button Itch Pack/Settings/Settings1.png" id="11_ql5ya"]
+[ext_resource type="Texture2D" uid="uid://wdh52oxw5vk2" path="res://assets/Button Itch Pack/Settings/Settings2.png" id="12_ka3nr"]
+[ext_resource type="Texture2D" uid="uid://ct6t1q4smubau" path="res://assets/Button Itch Pack/Settings/Settings3.png" id="13_48knj"]
+[ext_resource type="Texture2D" uid="uid://kk7nu4hn7hp2" path="res://assets/Button Itch Pack/Settings/Settings4.png" id="14_m2y5l"]
+[ext_resource type="Texture2D" uid="uid://bv8cwrex0835m" path="res://assets/Button Itch Pack/Settings/Settings5.png" id="15_imjy1"]
+[ext_resource type="Texture2D" uid="uid://bfcaa8e1ssmsi" path="res://assets/Button Itch Pack/Quit/Quit1.png" id="16_u5051"]
+[ext_resource type="Texture2D" uid="uid://x7xu1dy4v6s0" path="res://assets/Button Itch Pack/Back/Back1.png" id="17_e5qqf"]
+[ext_resource type="Texture2D" uid="uid://co5lesdac38cd" path="res://assets/Button Itch Pack/Quit/Quit2.png" id="17_v2sba"]
+[ext_resource type="Texture2D" uid="uid://cq6218ctvndod" path="res://assets/Button Itch Pack/Back/Back2.png" id="18_7bbuq"]
+[ext_resource type="Texture2D" uid="uid://q17fpvw43wj8" path="res://assets/Button Itch Pack/Quit/Quit3.png" id="18_ai24q"]
+[ext_resource type="Texture2D" uid="uid://b12jfdht6j6b8" path="res://assets/Button Itch Pack/Quit/Quit4.png" id="19_qby1g"]
+[ext_resource type="Texture2D" uid="uid://dgg8kpaluf0ct" path="res://assets/Button Itch Pack/Back/Back3.png" id="19_saq78"]
+[ext_resource type="Texture2D" uid="uid://c6mipa5cjoevq" path="res://assets/Button Itch Pack/Quit/Quit5.png" id="20_04soa"]
+[ext_resource type="Texture2D" uid="uid://df4isnmjm3it3" path="res://assets/Button Itch Pack/Back/Back4.png" id="20_8uw0o"]
+[ext_resource type="Texture2D" uid="uid://cdtd8ad2j1gji" path="res://assets/Button Itch Pack/Back/Back5.png" id="21_ql5ya"]
+[ext_resource type="PackedScene" uid="uid://d0gbadmd8auh0" path="res://menus/settings/settings.tscn" id="27_w2mh0"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_0o4t1"]
 animations = [{
@@ -179,6 +181,7 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 accessibility_name = "MainMenu"
+script = ExtResource("1_w2mh0")
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1638327346]
 layout_mode = 1
@@ -194,39 +197,39 @@ offset_bottom = 20.0
 grow_horizontal = 2
 grow_vertical = 2
 
-[node name="Start" type="TextureButton" parent="VBoxContainer" unique_id=775362963]
+[node name="ContinueButton" type="TextureButton" parent="VBoxContainer" unique_id=775362963]
 layout_mode = 2
 script = ExtResource("1_e5qqf")
 action = "continue"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/Start" unique_id=392190886]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/ContinueButton" unique_id=392190886]
 sprite_frames = SubResource("SpriteFrames_0o4t1")
 animation = &"click"
 
-[node name="New game" type="TextureButton" parent="VBoxContainer" unique_id=1482158561]
+[node name="NewGameButton" type="TextureButton" parent="VBoxContainer" unique_id=1482158561]
 layout_mode = 2
 script = ExtResource("1_e5qqf")
 action = "new_game"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/New game" unique_id=1730100890]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/NewGameButton" unique_id=1730100890]
 sprite_frames = SubResource("SpriteFrames_0k4wn")
 animation = &"click"
 
-[node name="Settings" type="TextureButton" parent="VBoxContainer" unique_id=1802570680]
+[node name="SettingsButton" type="TextureButton" parent="VBoxContainer" unique_id=1802570680]
 layout_mode = 2
 script = ExtResource("1_e5qqf")
 action = "settings"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/Settings" unique_id=1178661891]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/SettingsButton" unique_id=1178661891]
 sprite_frames = SubResource("SpriteFrames_j5v2v")
 animation = &"click"
 
-[node name="Quit game" type="TextureButton" parent="VBoxContainer" unique_id=1887016023]
+[node name="QuitButton" type="TextureButton" parent="VBoxContainer" unique_id=1887016023]
 layout_mode = 2
 script = ExtResource("1_e5qqf")
 action = "quit"
 
-[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/Quit game" unique_id=1784675]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="VBoxContainer/QuitButton" unique_id=1784675]
 sprite_frames = SubResource("SpriteFrames_iotk1")
 animation = &"click"
 
@@ -258,3 +261,6 @@ action = "back"
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="ConfirmPanel/Back" unique_id=1070798402]
 sprite_frames = SubResource("SpriteFrames_7bbuq")
 animation = &"click"
+
+[node name="Settings" parent="." unique_id=377787404 instance=ExtResource("27_w2mh0")]
+visible = false

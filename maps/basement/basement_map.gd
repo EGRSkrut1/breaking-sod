@@ -462,24 +462,10 @@ func return_to_main():
 	
 	save_dirt_state()
 	
-	var main_scene = load("res://maps/forest/forest.tscn").instantiate()
-	
-	get_tree().root.add_child(main_scene)
-	get_tree().current_scene = main_scene
-	
-	GameManager.last_map = "res://maps/forest/forest.tscn"
-	
-	var player_node = get_tree().get_first_node_in_group("player")
-	if player_node:
-		player_node.z_index = 100
-		var basements = main_scene.get_tree().get_nodes_in_group("basements")
-		for basement in basements:
-			if basement.has_method("get_cell_pos"):
-				var basement_pos = basement.get_cell_pos()
-				player_node.global_position = Vector2(basement_pos.x * GRID_SIZE + GRID_SIZE/2, basement_pos.y * GRID_SIZE + GRID_SIZE/2)
-				print("[BasementMap] Player set to basement position: ", basement_pos)
-				break
-	
+	var loading = load("res://menus/loading/loading.tscn").instantiate()
+	get_tree().root.add_child(loading)
+	loading.start_load("res://maps/forest/forest.tscn")
+	await loading.loading_complete
 	queue_free()
 
 func set_selected_build_item(item: String):

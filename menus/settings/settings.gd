@@ -1,4 +1,4 @@
-extends Control
+extends CanvasLayer
 
 @onready var resolution_option = $Panel/ResolutionOption
 @onready var vsync_option = $Panel/VsyncOption
@@ -6,28 +6,29 @@ extends Control
 @onready var language_option = $Panel/LanguageOption
 @onready var close_button = $Panel/CloseButton
 
-# Initializes settings menu
 func _ready():
 	print("[Settings] Started")
 	if close_button:
 		close_button.pressed.connect(_on_close_pressed)
 	
 	load_settings()
+	visible = false
 	print("[Settings] Ready")
 
-# Loads saved settings
 func load_settings():
 	print("[Settings] Loading settings")
 
-# Saves current settings
 func save_settings():
 	print("[Settings] Saving settings")
 
-# Applies settings changes
 func apply_settings():
 	print("[Settings] Applying settings")
 
-# Closes settings menu
 func _on_close_pressed():
 	print("[Settings] Close pressed")
-	queue_free()
+	visible = false
+
+func _input(event):
+	if event.is_action_pressed("cancel") and visible:
+		visible = false
+		get_viewport().set_input_as_handled()

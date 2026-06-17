@@ -13,6 +13,7 @@
 [ext_resource type="Script" uid="uid://d1thd4hkrmxw" path="res://maps/components/save load manager/save_load_manager.gd" id="9_au3wu"]
 [ext_resource type="PackedScene" uid="uid://dlfi0nl3oktks" path="res://ui/map choice/map_choice_ui.tscn" id="12_ym1mu"]
 [ext_resource type="PackedScene" uid="uid://co3rmtie2kkkw" path="res://menus/console/console.tscn" id="13_v83vu"]
+[ext_resource type="PackedScene" uid="uid://b1um2gyy7t5n4" path="res://menus/loading/loading.tscn" id="14_b6hs2"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8pvcx"]
 texture = ExtResource("2_8pvcx")
@@ -291,3 +292,5 @@ position = Vector2(198, 384)
 [node name="MapChoiceUI" parent="." unique_id=322771056 instance=ExtResource("12_ym1mu")]
 
 [node name="Console" parent="." unique_id=212284830 instance=ExtResource("13_v83vu")]
+
+[node name="Loading" parent="." unique_id=809890356 instance=ExtResource("14_b6hs2")]

@@ -15,10 +15,7 @@
 [ext_resource type="PackedScene" uid="uid://dlfi0nl3oktks" path="res://ui/map choice/map_choice_ui.tscn" id="6_fytou"]
 [ext_resource type="Script" uid="uid://d1thd4hkrmxw" path="res://maps/components/save load manager/save_load_manager.gd" id="7_10fg0"]
 [ext_resource type="PackedScene" uid="uid://ckhl1x1o0w7ln" path="res://maps/transition function/map exit/map_exit.tscn" id="13_e8yxj"]
-[ext_resource type="PackedScene" uid="uid://c544nxjps3g02" path="res://buildings/dryer/dryer.tscn" id="18_xjfxx"]
-[ext_resource type="PackedScene" uid="uid://mdrs3b3ts4s8" path="res://buildings/well/well.tscn" id="19_3kxvl"]
-[ext_resource type="PackedScene" uid="uid://oh52dlm87w1y" path="res://buildings/graver/graver.tscn" id="19_kde4d"]
-[ext_resource type="PackedScene" uid="uid://6h4k5w2wx28o" path="res://buildings/wrapper/wrapper.tscn" id="22_1pxco"]
+[ext_resource type="PackedScene" uid="uid://b1um2gyy7t5n4" path="res://menus/loading/loading.tscn" id="20_3kxvl"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_vfm1y"]
 texture = ExtResource("2_vfm1y")
@@ -302,14 +299,4 @@ position = Vector2(200, 480)
 [node name="MapExit" parent="." unique_id=320086748 instance=ExtResource("13_e8yxj")]
 position = Vector2(199, 505)
 
-[node name="Graver" parent="." unique_id=10691940 instance=ExtResource("19_kde4d")]
-position = Vector2(403, 464)
-
-[node name="Dryer" parent="." unique_id=521811407 instance=ExtResource("18_xjfxx")]
-position = Vector2(486, 468)
-
-[node name="Wrapper" parent="." unique_id=1856135043 instance=ExtResource("22_1pxco")]
-position = Vector2(569, 475)
-
-[node name="Well" parent="." unique_id=1509088520 instance=ExtResource("19_3kxvl")]
-position = Vector2(650, 460)
+[node name="Loading" parent="." unique_id=809890356 instance=ExtResource("20_3kxvl")]

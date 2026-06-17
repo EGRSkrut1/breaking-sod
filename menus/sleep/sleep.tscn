@@ -1,0 +1,131 @@
+[gd_scene format=3 uid="uid://bg65sqmdj05td"]
+
+[ext_resource type="Script" uid="uid://c1yik6b3ljb7q" path="res://menus/sleep/sleep.gd" id="1_c2ln5"]
+
+[node name="Sleep" type="CanvasLayer" unique_id=809890356]
+script = ExtResource("1_c2ln5")
+
+[node name="Background" type="ColorRect" parent="." unique_id=1854651652]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 1)
+
+[node name="Panel" type="Panel" parent="." unique_id=446774234]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -268.0
+offset_top = -192.5
+offset_right = 268.0
+offset_bottom = 192.5
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CloseButton" type="Button" parent="Panel" unique_id=593133632]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -82.0
+offset_top = -39.5
+offset_right = 82.0
+offset_bottom = -8.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Continue"
+
+[node name="AwakeLabel" type="Label" parent="Panel" unique_id=2118617463]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -80.0
+offset_top = -92.0
+offset_right = 80.00006
+offset_bottom = -68.99994
+grow_horizontal = 2
+grow_vertical = 2
+text = "Time awake: X hours"
+
+[node name="SleptLabel" type="Label" parent="Panel" unique_id=269402155]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -66.5
+offset_top = -44.714996
+offset_right = 66.5
+offset_bottom = -21.714996
+grow_horizontal = 2
+grow_vertical = 2
+text = "Slept for: Y hours"
+
+[node name="EarnedLabel" type="Label" parent="Panel" unique_id=204552871]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -46.0
+offset_top = 0.20500183
+offset_right = 46.0
+offset_bottom = 23.205002
+grow_horizontal = 2
+grow_vertical = 2
+text = "Earned: +$X"
+
+[node name="SpentLabel" type="Label" parent="Panel" unique_id=1268211222]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -38.5
+offset_top = 39.770004
+offset_right = 38.5
+offset_bottom = 62.770004
+grow_horizontal = 2
+grow_vertical = 2
+text = "Spent: -$Y"
+
+[node name="TitleLabel" type="Label" parent="Panel" unique_id=1380613280]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -21.0
+offset_right = 21.0
+offset_bottom = 23.0
+grow_horizontal = 2
+text = "Sleep"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DayLabel" type="Label" parent="Panel" unique_id=723459559]
+layout_mode = 0
+offset_left = 177.0
+offset_top = 286.5
+offset_right = 225.0
+offset_bottom = 309.5
+text = "Day: 0"
+
+[node name="TimeLabel" type="Label" parent="Panel" unique_id=2115653718]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 285.5
+offset_right = 370.0
+offset_bottom = 308.5
+text = "Time: 0:00"

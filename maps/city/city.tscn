@@ -16,6 +16,7 @@
 [ext_resource type="PackedScene" uid="uid://dlfi0nl3oktks" path="res://ui/map choice/map_choice_ui.tscn" id="10_tqwcp"]
 [ext_resource type="PackedScene" uid="uid://rr0p3vf3dr2p" path="res://buildings/atm/atm.tscn" id="12_nkk06"]
 [ext_resource type="PackedScene" uid="uid://i416wg6f7hl5" path="res://entity/customer/customer.tscn" id="13_3i1jh"]
+[ext_resource type="PackedScene" uid="uid://b1um2gyy7t5n4" path="res://menus/loading/loading.tscn" id="17_x16yh"]
 
 [node name="City" type="Node2D" unique_id=1624249067]
 script = ExtResource("1_hpa3k")
@@ -59,3 +60,5 @@ position = Vector2(-200, -4)
 
 [node name="Customer" parent="." unique_id=1491910938 instance=ExtResource("13_3i1jh")]
 position = Vector2(-141, 90)
+
+[node name="Loading" parent="." unique_id=809890356 instance=ExtResource("17_x16yh")]

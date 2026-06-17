@@ -12,8 +12,6 @@ func _ready():
 	add_to_group("buildings")
 	add_to_group("beds")
 	
-	print("[Bed] Started")
-	
 	if anim_sprite and anim_sprite.sprite_frames:
 		if anim_sprite.sprite_frames.has_animation("idle"):
 			anim_sprite.play("idle")
@@ -42,7 +40,6 @@ func get_save_data() -> Dictionary:
 	}
 
 func interact():
-	print("[Bed] Interact called")
 	var player = get_tree().get_first_node_in_group("player")
 	if not player:
 		return
@@ -54,6 +51,12 @@ func interact():
 	if is_using:
 		return
 	
+	if GameManager.sleep >= 40:
+		var ui = get_tree().current_scene.get_node_or_null("UI")
+		if ui and ui.has_method("show_floating_text"):
+			ui.show_floating_text("Not tired yet", Color(1, 0.5, 0, 1), global_position)
+		return
+	
 	start_sleeping(player)
 
 func start_sleeping(player):
@@ -61,19 +64,14 @@ func start_sleeping(player):
 	is_using = true
 	player_ref = player
 	
-	if progress_bar:
-		progress_bar.visible = true
-		progress_bar.value = 0
-	
 	if player_ref:
 		player_ref.velocity = Vector2.ZERO
 		player_ref.set_physics_process(false)
+		player_ref.set_process_input(false)
 	
-	var old_energy = GameManager.energy
-	var old_sleep = GameManager.sleep
-	
-	var hours_awake = 48.0 - (float(GameManager.sleep) / float(GameManager.max_sleep) * 48.0)
-	var sleep_hours = clamp(hours_awake * 0.33, 4.0, 16.0)
+	var hours_awake = 48 - GameManager.sleep
+	var sleep_hours = hours_awake / 2.0
+	sleep_hours = clamp(sleep_hours, 4.0, 24.0)
 	var sleep_minutes = int(sleep_hours * 60.0)
 	
 	GameManager.sleep = GameManager.max_sleep
@@ -91,38 +89,39 @@ func start_sleeping(player):
 			GameManager.game_day += 1
 	GameManager.time_changed.emit()
 	
-	var energy_gained = GameManager.energy - old_energy
-	var sleep_gained = GameManager.sleep - old_sleep
+	GameManager.save_game()
 	
-	var ui = get_tree().current_scene.get_node_or_null("UI")
-	if ui and ui.has_method("show_floating_text"):
-		if energy_gained > 0:
-			ui.show_floating_text("+" + str(energy_gained), Color(1, 1, 0, 1), global_position + Vector2(-20, -30))
-		if sleep_gained > 0:
-			ui.show_floating_text("+" + str(sleep_gained), Color(0.8, 0.2, 0.8, 1), global_position + Vector2(20, -30))
+	print("[Bed] Loading sleep screen")
+	var sleep_screen = load("res://menus/sleep/sleep.tscn")
+	if not sleep_screen:
+		print("[Bed] Failed to load sleep screen")
+		if player_ref:
+			player_ref.set_physics_process(true)
+			player_ref.set_process_input(true)
+			player_ref = null
+		is_using = false
+		return
 	
-	var timer = 0.0
-	var animation_duration = 1.0
-	while timer < animation_duration:
-		await get_tree().create_timer(0.05).timeout
-		timer += 0.05
-		if progress_bar:
-			progress_bar.value = (timer / animation_duration) * 100
+	var sleep_screen_instance = sleep_screen.instantiate()
+	print("[Bed] Sleep screen instantiated")
+	get_tree().current_scene.add_child(sleep_screen_instance)
+	print("[Bed] Sleep screen added to scene")
+	sleep_screen_instance.show_sleep_screen()
+	print("[Bed] Sleep screen shown")
+	await sleep_screen_instance.tree_exited
+	print("[Bed] Sleep screen closed")
 	
 	if player_ref:
 		player_ref.set_physics_process(true)
+		player_ref.set_process_input(true)
 		player_ref = null
 	
 	is_using = false
-	
-	if progress_bar:
-		progress_bar.visible = false
-	
-	print("[Bed] Sleep complete")
 
 func _on_body_entered(body):
 	if body.is_in_group("player") and interact_label and not is_using:
-		interact_label.visible = true
+		if GameManager.sleep < 40:
+			interact_label.visible = true
 
 func _on_body_exited(body):
 	if body.is_in_group("player") and interact_label:

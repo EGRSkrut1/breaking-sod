@@ -67,6 +67,7 @@ var game_day: int = 1
 
 var game_time_timer: float = 0.0
 var time_scale: float = 60.0
+var game_time_timer_active: bool = true
 
 var green_sold: int = 0
 var purple_sold: int = 0
@@ -87,6 +88,8 @@ func _ready():
 	print("[GameManager] Ready")
 
 func _process(delta):
+	if not game_time_timer_active:
+		return
 	game_time_timer += delta * time_scale
 	while game_time_timer >= 60.0:
 		game_time_timer -= 60.0
@@ -229,7 +232,6 @@ func sell_inventory_item(index: int):
 		inventory_changed.emit()
 		print("[GameManager] Sold inventory item at index: ", index)
 
-# Forest save/load
 func save_forest_crop_data(crop_dictionary: Dictionary):
 	forest_crop_data = crop_dictionary
 
@@ -244,7 +246,6 @@ func get_forest_buildings_data() -> Dictionary:
 	print("[GameManager] Returning forest buildings data, size: ", forest_buildings_data.size())
 	return forest_buildings_data
 
-# Basement save/load
 func save_basement_crop_data(crop_dictionary: Dictionary):
 	basement_crop_data = crop_dictionary
 
@@ -268,7 +269,6 @@ func get_basement_dirt_data() -> Dictionary:
 	print("[GameManager] Returning basement dirt data, size: ", basement_dirt_data.size())
 	return basement_dirt_data
 
-# Shared water data
 func save_water_data(water_dictionary: Dictionary):
 	water_data = water_dictionary
 	print("[GameManager] Water data saved")
@@ -303,7 +303,7 @@ func use_sleep(amount: int):
 	sleep_changed.emit()
 	
 	if sleep <= 0:
-		handle_sleep_pass_out()
+		force_sleep()
 
 func restore_sleep(amount: int):
 	var old_sleep = sleep
@@ -318,15 +318,19 @@ func restore_sleep(amount: int):
 			if gained > 0:
 				ui.show_floating_text("+ " + str(gained) + " sleep", Color(0.8, 0.2, 0.8, 1), player.global_position + Vector2(0, -40))
 
-func handle_sleep_pass_out():
-	print("[GameManager] Player passed out from exhaustion!")
+func force_sleep():
+	print("[GameManager] Force sleep - passing out!")
 	
-	var hours_awake = 48.0 - float(sleep)
-	var sleep_hours = clamp(hours_awake * 0.33, 4.0, 16.0)
+	var hours_awake = 48 - sleep
+	var sleep_hours = hours_awake / 2
+	sleep_hours = clamp(sleep_hours, 4.0, 24.0)
 	var sleep_minutes = int(sleep_hours * 60.0)
 	
 	sleep = max_sleep
 	sleep_changed.emit()
+	
+	energy = max_energy
+	energy_changed.emit()
 	
 	game_minutes += sleep_minutes
 	while game_minutes >= 60:
@@ -337,14 +341,26 @@ func handle_sleep_pass_out():
 			game_day += 1
 	time_changed.emit()
 	
-	var hospital_bill = 500
-	if money >= hospital_bill:
-		money -= hospital_bill
-	else:
-		money = 0
-	money_changed.emit()
+	save_game()
 	
-	print("[GameManager] Passed out! Lost $", hospital_bill, " and slept for ", sleep_hours, " hours")
+	var sleep_screen = load("res://menus/sleep/sleep.tscn").instantiate()
+	get_tree().current_scene.add_child(sleep_screen)
+	sleep_screen.show_sleep_screen()
+	
+	await sleep_screen.tree_exited
+	_teleport_to_city()
+
+func _teleport_to_city():
+	print("[GameManager] Teleporting to city after passing out")
+	var loading = load("res://menus/loading/loading.tscn").instantiate()
+	get_tree().root.add_child(loading)
+	loading.start_load("res://maps/city/city.tscn")
+	await loading.loading_complete
+	loading.queue_free()
+
+func handle_sleep_pass_out():
+	print("[GameManager] Player passed out from exhaustion!")
+	force_sleep()
 
 func add_sold_plant(plant_type: String):
 	match plant_type:
@@ -402,6 +418,7 @@ func new_game():
 	game_minutes = 0
 	game_day = 1
 	game_time_timer = 0.0
+	game_time_timer_active = true
 	green_sold = 0
 	purple_sold = 0
 	white_sold = 0
@@ -440,6 +457,7 @@ func save_game():
 		"game_hours": game_hours,
 		"game_minutes": game_minutes,
 		"game_day": game_day,
+		"game_time_timer_active": game_time_timer_active,
 		"green_sold": green_sold,
 		"purple_sold": purple_sold,
 		"white_sold": white_sold
@@ -489,6 +507,7 @@ func load_game():
 			game_hours = data.get("game_hours", 8)
 			game_minutes = data.get("game_minutes", 0)
 			game_day = data.get("game_day", 1)
+			game_time_timer_active = data.get("game_time_timer_active", true)
 			green_sold = data.get("green_sold", 0)
 			purple_sold = data.get("purple_sold", 0)
 			white_sold = data.get("white_sold", 0)
